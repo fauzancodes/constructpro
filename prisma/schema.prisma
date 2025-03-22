@@ -1,0 +1,276 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid @map("id")
+  email      String?   @db.VarChar(512) @map("email")
+  password   String?   @db.VarChar(512) @map("password")
+  createdAt  DateTime? @default(now()) @map("created_at")
+  updatedAt  DateTime? @default(now()) @map("updated_at")
+  deletedAt  DateTime? @map("deleted_at")
+
+  @@map("users")
+}
+
+model ImageSlider {
+  id         String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid @map("id")
+  title      String?   @db.VarChar(512) @map("title")
+  image      String?   @db.VarChar(512) @map("image")
+  order      Int?      @map("order")
+  createdAt  DateTime? @default(now()) @map("created_at")
+  updatedAt  DateTime? @default(now()) @map("updated_at")
+  deletedAt  DateTime? @map("deleted_at")
+
+  @@map("image_sliders")
+}
+
+model BusinessValue {
+  id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid @map("id")
+  title       String?   @db.VarChar(512) @map("title")
+  description String?   @db.VarChar(512) @map("description")
+  code        String?   @db.VarChar(512) @map("code")
+  order       Int?      @map("order")
+  createdAt   DateTime? @default(now()) @map("created_at")
+  updatedAt   DateTime? @default(now()) @map("updated_at")
+  deletedAt   DateTime? @map("deleted_at")
+
+  @@map("business_values")
+}
+
+model WorkValue {
+  id              String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid @map("id")
+  description     String?   @db.VarChar(512) @map("description")
+  subtitle1       String?   @db.VarChar(512) @map("subtitle_1")
+  subdescription1 String?   @db.VarChar(512) @map("subdescription_1")
+  subtitle2       String?   @db.VarChar(512) @map("subtitle_2")
+  subdescription2 String?   @db.VarChar(512) @map("subdescription_2")
+  callToAction1   String?   @db.VarChar(512) @map("call_to_action_1")
+  callToAction2   String?   @db.VarChar(512) @map("call_to_action_2")
+  image           String?   @map("image")
+  createdAt       DateTime? @default(now()) @map("created_at")
+  updatedAt       DateTime? @default(now()) @map("updated_at")
+  deletedAt       DateTime? @map("deleted_at")
+
+  @@map("work_values")
+}
+
+model Achievement {
+  id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid @map("id")
+  title       String?   @db.VarChar(512) @map("title")
+  total       Int?      @map("total")
+  code        String?   @db.VarChar(512) @map("code")
+  createdAt   DateTime? @default(now()) @map("created_at")
+  updatedAt   DateTime? @default(now()) @map("updated_at")
+  deletedAt   DateTime? @map("deleted_at")
+
+  @@map("achievements")
+}
+
+model CallToAction {
+  id              String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid @map("id")
+  title           String?   @db.VarChar(512) @map("title")
+  description     String?   @db.VarChar(512) @map("description")
+  callToAction1   String?   @db.VarChar(512) @map("call_to_action_1")
+  callToAction2   String?   @db.VarChar(512) @map("call_to_action_2")
+  image1          String?   @map("image_1")
+  image2          String?   @map("image_2")
+  image3          String?   @map("image_3")
+  image4          String?   @map("image_4")
+  image5          String?   @map("image_5")
+  image6          String?   @map("image_6")
+  createdAt       DateTime? @default(now()) @map("created_at")
+  updatedAt       DateTime? @default(now()) @map("updated_at")
+  deletedAt       DateTime? @map("deleted_at")
+
+  @@map("call_to_actions")
+}
+
+model FAQ {
+  id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid @map("id")
+  question    String?   @db.VarChar(512) @map("question")
+  answer      String?   @db.VarChar(512) @map("answer")
+  order       Int?      @map("order")
+  createdAt   DateTime? @default(now()) @map("created_at")
+  updatedAt   DateTime? @default(now()) @map("updated_at")
+  deletedAt   DateTime? @map("deleted_at")
+
+  @@map("faqs")
+}
+
+model Client {
+  id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid @map("id")
+  name        String?   @db.VarChar(512) @map("name")
+  image       String?   @db.VarChar(512) @map("image")
+  order       Int?      @map("order")
+  createdAt   DateTime? @default(now()) @map("created_at")
+  updatedAt   DateTime? @default(now()) @map("updated_at")
+  deletedAt   DateTime? @map("deleted_at")
+
+  @@map("clients")
+}
+
+model SectionHeader {
+  id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid @map("id")
+  title       String?   @db.VarChar(512) @map("title")
+  code        String?   @db.VarChar(512) @map("code")
+  createdAt   DateTime? @default(now()) @map("created_at")
+  updatedAt   DateTime? @default(now()) @map("updated_at")
+  deletedAt   DateTime? @map("deleted_at")
+
+  @@map("section_headers")
+}
+
+model PageHeader {
+  id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid @map("id")
+  title       String?   @db.VarChar(512) @map("title")
+  code        String?   @db.VarChar(512) @map("code")
+  image       String?   @db.VarChar(512) @map("image")
+  createdAt   DateTime? @default(now()) @map("created_at")
+  updatedAt   DateTime? @default(now()) @map("updated_at")
+  deletedAt   DateTime? @map("deleted_at")
+
+  @@map("page_headers")
+}
+
+model Contact {
+  id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid @map("id")
+  title       String?   @db.VarChar(512) @map("title")
+  description String?   @db.VarChar(512) @map("description")
+  link        String?   @db.VarChar(512) @map("link")
+  code        String?   @db.VarChar(512) @map("code")
+  image       String?   @db.VarChar(512) @map("image")
+  createdAt   DateTime? @default(now()) @map("created_at")
+  updatedAt   DateTime? @default(now()) @map("updated_at")
+  deletedAt   DateTime? @map("deleted_at")
+
+  @@map("contacts")
+}
+
+model About {
+  id            String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid @map("id")
+  title         String?   @db.VarChar(512) @map("title")
+  description   String?   @map("description")
+  callToAction  String?   @db.VarChar(512) @map("call_to_action")
+  image1        String?   @db.VarChar(512) @map("image_1")
+  image2        String?   @db.VarChar(512) @map("image_2")
+  image3        String?   @db.VarChar(512) @map("image_3")
+  createdAt     DateTime? @default(now()) @map("created_at")
+  updatedAt     DateTime? @default(now()) @map("updated_at")
+  deletedAt     DateTime? @map("deleted_at")
+
+  @@map("abouts")
+}
+
+model Service {
+  id            String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid @map("id")
+  title         String?   @db.VarChar(512) @map("title")
+  description   String?   @db.VarChar(512) @map("description")
+  image         String?   @db.VarChar(512) @map("image")
+  order         Int?      @map("order")
+  status        Boolean?  @db.Boolean @map("status")
+  createdAt     DateTime? @default(now()) @map("created_at")
+  updatedAt     DateTime? @default(now()) @map("updated_at")
+  deletedAt     DateTime? @map("deleted_at")
+  portfolioes   Portfolio[]
+
+  @@map("services")
+}
+
+model Portfolio {
+  id            String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid @map("id")
+  title         String?   @db.VarChar(512) @map("title")
+  slug          String?   @db.VarChar(512) @map("slug")
+  description   String?   @map("description")
+  client        String?   @db.VarChar(512) @map("client")
+  start         DateTime? @map("start")
+  end           DateTime? @map("end")
+  address       String?   @db.VarChar(512) @map("address")
+  image1        String?   @db.VarChar(512) @map("image_1")
+  image2        String?   @db.VarChar(512) @map("image_2")
+  image3        String?   @db.VarChar(512) @map("image_3")
+  image4        String?   @db.VarChar(512) @map("image_4")
+  image5        String?   @db.VarChar(512) @map("image_5")
+  image6        String?   @db.VarChar(512) @map("image_6")
+  image7        String?   @db.VarChar(512) @map("image_7")
+  image8        String?   @db.VarChar(512) @map("image_8")
+  image9        String?   @db.VarChar(512) @map("image_9")
+  image10       String?   @db.VarChar(512) @map("image_10")
+  status        Boolean?  @db.Boolean @map("status")
+  serviceId     String?   @db.Uuid @map("service_id")
+  service       Service?  @relation(fields: [serviceId], references: [id])
+  createdAt     DateTime? @default(now()) @map("created_at")
+  updatedAt     DateTime? @default(now()) @map("updated_at")
+  deletedAt     DateTime? @map("deleted_at")
+
+  @@map("portfolioes")
+}
+
+model BlogCategory {
+  id            String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid @map("id")
+  title         String?   @db.VarChar(512) @map("title")
+  order         Int?      @map("order")
+  status        Boolean?  @db.Boolean @map("status")
+  createdAt     DateTime? @default(now()) @map("created_at")
+  updatedAt     DateTime? @default(now()) @map("updated_at")
+  deletedAt     DateTime? @map("deleted_at")
+  blogs         Blog[]
+
+  @@map("blog_categories")
+}
+
+model Blog {
+  id            String        @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid @map("id")
+  title         String?       @db.VarChar(512) @map("title")
+  slug          String?       @db.VarChar(512) @map("slug")
+  description   String?       @map("description")
+  author        String?       @db.VarChar(512) @map("author")
+  date          DateTime?     @default(now()) @map("date")
+  body          String?       @map("body")
+  tags          String?       @map("tags")
+  image         String?       @db.VarChar(512) @map("image")
+  status        Boolean?      @db.Boolean @map("status")
+  categoryId    String?       @db.Uuid @map("category_id")
+  category      BlogCategory? @relation(fields: [categoryId], references: [id])
+  createdAt     DateTime?     @default(now()) @map("created_at")
+  updatedAt     DateTime?     @default(now()) @map("updated_at")
+  deletedAt     DateTime?     @map("deleted_at")
+
+  @@map("blogs")
+}
+
+model SocialMedia {
+  id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid @map("id")
+  title       String?   @db.VarChar(512) @map("title")
+  link        String?   @db.VarChar(512) @map("link")
+  createdAt   DateTime? @default(now()) @map("created_at")
+  updatedAt   DateTime? @default(now()) @map("updated_at")
+  deletedAt   DateTime? @map("deleted_at")
+
+  @@map("social_media")
+}
+
+model Quotation {
+  id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid @map("id")
+  title       String?   @db.VarChar(512) @map("title")
+  description String?   @map("description")
+  fullname    String?   @db.VarChar(512) @map("fullname")
+  email       String?   @db.VarChar(512) @map("email")
+  phone       String?   @db.VarChar(512) @map("phone")
+  createdAt   DateTime? @default(now()) @map("created_at")
+  updatedAt   DateTime? @default(now()) @map("updated_at")
+  deletedAt   DateTime? @map("deleted_at")
+
+  @@map("quotations")
+}
