@@ -175,7 +175,7 @@ const Footer = () => {
               whileHover={{ translateX: "0.5rem" }}
             >
               <Link href={address?.link || "#"} className="btn btn-ghost hover:btn-link text-[16px] font-normal p-0 h-fit mb-3 text-left">
-                <FaArrowRight className="w-10" />
+                <FaArrowRight />
                 {address?.title}: {address?.description}
               </Link>
             </motion.div>
@@ -187,8 +187,8 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} ConstructPro. All rights reserved.
         </p>
         <div className="flex flex-col md:flex-row md:gap-5">
-          <Link href={`#`} className="btn btn-ghost hover:btn-link text-[16px] p-0 h-fit">Syarat Dan Ketentuan</Link>
-          <Link href={`#`} className="btn btn-ghost hover:btn-link text-[16px] p-0 h-fit">Kebijakan Privasi</Link>
+          <Link href={`#`} className="btn btn-ghost hover:btn-link text-[16px] p-0 h-fit">Term And Condition</Link>
+          <Link href={`#`} className="btn btn-ghost hover:btn-link text-[16px] p-0 h-fit">Privacy Policy</Link>
         </div>
       </div>
     </div>

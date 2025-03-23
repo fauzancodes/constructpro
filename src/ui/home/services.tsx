@@ -84,7 +84,7 @@ const Services = () => {
               whileHover={{ scale: 1.1 }}
             >
               <Link href={"/services"} className="btn text-primary hover:btn-primary hover:text-primary-content">
-                PELAJARI LEBIH LANJUT
+                Learn More
                 <FaArrowUpRightFromSquare className="ml-3" />
               </Link>
             </motion.div>

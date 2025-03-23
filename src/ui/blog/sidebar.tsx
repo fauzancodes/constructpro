@@ -77,14 +77,14 @@ const Sidebar = ({ setSelectedCategoryId, setSearch, setSearchTags, setCurrentPa
         custom={0.2}
       >
         <fieldset className="fieldset">
-          <legend className="fieldset-legend font-semibold text-2xl">PENCARIAN</legend>
+          <legend className="fieldset-legend font-semibold text-2xl">SEARCH</legend>
           <div className="join">
             <input onChange={(e) => {
               setCurrentPage(1)
               setTotalPage(1)
               setOffset(0)
               setSearch(e.target.value)
-            }} type="text" className="input join" placeholder="Cari....." />
+            }} type="text" className="input join" placeholder="Search....." />
             <button className="btn btn-primary join-item"><FaSearch /></button>
           </div>
         </fieldset>
@@ -103,7 +103,7 @@ const Sidebar = ({ setSelectedCategoryId, setSearch, setSearchTags, setCurrentPa
           whileHover={{ scale: 1.1 }}
           onClick={() => handleCategoryFilter("")}
         >
-          <div className="border border-base-300 w-full p-3 font-medium text-start">SEMUA</div>
+          <div className="border border-base-300 w-full p-3 font-medium text-start">ALL</div>
           {/* <div className="border border-base-300 py-3 px-5">{1}</div> */}
         </motion.button>
         {categories.map((item, index) => (
@@ -126,7 +126,7 @@ const Sidebar = ({ setSelectedCategoryId, setSearch, setSearchTags, setCurrentPa
         variants={SlideUpVariant}
         custom={0}
       >
-        <h2 className="font-semibold text-2xl mb-3">POST TERBARU</h2>
+        <h2 className="font-semibold text-2xl mb-3">LATEST POST</h2>
         {blogs.length === 0 ? (
           <p className="w-full flex items-center justify-center text-center">Data tidak ditemukan.</p>
         ) : blogs.map((item, index) => (

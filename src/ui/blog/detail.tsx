@@ -21,7 +21,7 @@ const Detail = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPage, setTotalPage] = useState(1);
   const [offset, setOffset] = useState(0);
-  const [perPage] = useState(2);
+  const [perPage] = useState(3);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -85,7 +85,7 @@ const Detail = () => {
                   className="w-fit"
                   whileHover={{ scale: 1.1 }}
                 >
-                  <Link href={`/blog/${item.slug}`} className="btn btn-primary btn-lg">Baca Selengkapnya</Link>
+                  <Link href={`/blog/${item.slug}`} className="btn btn-primary btn-lg">Read More</Link>
                 </motion.div>
               </div>
             </motion.div>

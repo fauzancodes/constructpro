@@ -68,7 +68,7 @@ const WhatsappButton = () => {
               Thank You!
             </div>
           </div>
-          {!isLoading && socialMedia.length > 0 && <Link href={`${socialMedia.find((item) => item.title.toLocaleLowerCase() === "whatsapp").link}?text=Halo!%20Saya%20tertarik%20untuk%20menggunakan%20jasa%20konstruksi%20Anda.%20Bisa%20bantu%20saya%20untuk%20informasi%20lebih%20lanjut?%20Terima%20kasih!`} target="_blank" rel="noopener noreferrer" className="bg-[#03D758] hover:bg-[#04A884] flex items-center justify-between text-base-100 cursor-pointer w-full rounded-full px-5 py-3 mt-5">
+          {!isLoading && socialMedia.length > 0 && <Link href={`${socialMedia.find((item) => item.title.toLocaleLowerCase() === "whatsapp").link}?text=Hello%21%20I%20am%20interested%20in%20using%20your%20construction%20services.%20Could%20you%20provide%20me%20with%20more%20information%3F%20Thank%20you%21`} target="_blank" rel="noopener noreferrer" className="bg-[#03D758] hover:bg-[#04A884] flex items-center justify-between text-base-100 cursor-pointer w-full rounded-full px-5 py-3 mt-5">
             <FaUser className="border rounded-full text-3xl p-1" />
             <div className="font-medium text-lg">Chat With ConstructPro Admin</div>
             <FaPaperPlane className="text-2xl" />

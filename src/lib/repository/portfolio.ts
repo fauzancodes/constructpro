@@ -2,6 +2,7 @@
 
 import { Portfolio } from "@/types/common.types";
 import { PrismaClient } from "@prisma/client";
+import { GenerateSlug } from "../utilities/common";
 
 const prisma = new PrismaClient({
   log: ['query'],
@@ -93,7 +94,7 @@ export const CreatePortfolio = async (createData: Portfolio) => {
     const startISO = createData.start ? new Date(createData.start).toISOString() : null;
     const endISO = createData.end ? new Date(createData.end).toISOString() : null;
 
-    createData.slug = createData.title?.toLocaleLowerCase().replaceAll("?","").replaceAll("!","").replaceAll(",","").replaceAll(".","").replaceAll("'","").replaceAll(" ","-")
+    createData.slug = GenerateSlug(createData.title || "")
 
     const newData = await prisma.portfolio.create({
       data: {
@@ -142,7 +143,7 @@ export const UpdatePortfolio = async (updateData: Portfolio) => {
     const startISO = updateData.start ? new Date(updateData.start).toISOString() : null;
     const endISO = updateData.end ? new Date(updateData.end).toISOString() : null;
 
-    updateData.slug = updateData.title?.toLocaleLowerCase().replaceAll("?","").replaceAll("!","").replaceAll(",","").replaceAll(".","").replaceAll("'","").replaceAll(" ","-")
+    updateData.slug = GenerateSlug(updateData.title || "")
 
     const updatedData = await prisma.portfolio.update({
       where: { id: updateData.id },

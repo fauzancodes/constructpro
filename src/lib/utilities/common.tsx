@@ -1,4 +1,5 @@
 import { FaBars, FaBriefcase, FaBuilding, FaCity, FaEnvelope, FaFacebook, FaGlobe, FaHouse, FaInstagram, FaLinkedin, FaNewspaper, FaPhoneVolume, FaTableColumns, FaTiktok, FaUsers, FaWhatsapp, FaYoutube } from "react-icons/fa6";
+import { text } from "stream/consumers";
 
 export function Capitalize(word: string): string {
   return word?.charAt(0).toUpperCase() + word?.slice(1).toLowerCase();
@@ -22,7 +23,7 @@ export function CommaSpaceToComma(word: string): string {
 
 export const StringToDate = (datestring: string) => {
   if (datestring) {
-    return new Date(datestring).toLocaleDateString("id-ID", {
+    return new Date(datestring).toLocaleDateString("en-EN", {
       day: "2-digit",
       month: "long",
       year: "numeric"
@@ -32,23 +33,23 @@ export const StringToDate = (datestring: string) => {
 
 export const SelectMenuIcon = (name: string) => {
   switch (name) {
-    case "Penawaran":
+    case "Quotation":
       return <FaEnvelope />;
     case "Dashboard":
       return <FaTableColumns />;
-    case "Beranda":
+    case "Home":
       return <FaHouse />;
-    case "Tentang":
+    case "About":
       return <FaBuilding />;
-    case "Klien":
+    case "Client":
       return <FaUsers />;
-    case "Layanan":
+    case "Service":
       return <FaBriefcase />;
     case "Portfolio":
       return <FaCity />;
     case "Blog":
       return <FaNewspaper />;
-    case "Kontak":
+    case "Contact":
       return <FaPhoneVolume />;
     default:
       return <FaBars />;
@@ -88,4 +89,8 @@ export const HandleScrollToElement = (targetId: string) => {
 
 export const GenerateIdFromText = (text: string) => {
   return text.toLowerCase().replaceAll(" ","-")
+}
+
+export const GenerateSlug = (text: string) => {
+  return text.toLocaleLowerCase().replaceAll("?","").replaceAll(":","").replaceAll("!","").replaceAll(",","").replaceAll(".","").replaceAll("'","").replaceAll(" ","-")
 }

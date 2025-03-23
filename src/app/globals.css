@@ -75,42 +75,54 @@
   margin-bottom: 1.25rem;
 }
 
-#blog-detail h1, #blog-detail h2, #blog-detail h3, #blog-detail h4, #blog-detail h5, #blog-detail h6 {
+#blog-detail h1, #blog-detail h2, #blog-detail h3, #blog-detail h4, #blog-detail h5, #blog-detail h6,
+#project-detail h1, #project-detail h2, #project-detail h3, #project-detail h4, #project-detail h5, #project-detail h6 {
   font-weight: 600;
 }
 
-#blog-detail h1 {
+#blog-detail h1,
+#project-detail h1 {
   font-size: 2.25rem;
 }
-#blog-detail h2 {
+#blog-detail h2,
+#project-detail h2 {
   font-size: 2rem;
 }
-#blog-detail h3 {
+#blog-detail h3,
+#project-detail h3 {
   font-size: 1.75rem;
 }
-#blog-detail h4 {
+#blog-detail h4,
+#project-detail h4 {
   font-size: 1.5rem;
 }
-#blog-detail h5 {
+#blog-detail h5,
+#project-detail h5 {
   font-size: 1.25rem;
 }
-#blog-detail h6 {
+#blog-detail h6,
+#project-detail h6 {
   font-size: 1rem;
 }
-#blog-detail ul, #blog-detail ol {
+#blog-detail ul, #blog-detail ol,
+#project-detail ul, #project-detail ol {
   list-style-position: outside;
 }
-#blog-detail li[data-list="bullet"] {
+#blog-detail li[data-list="bullet"],
+#project-detail li[data-list="bullet"] {
   list-style-type: disc;
 }
-#blog-detail li[data-list="ordered"] {
+#blog-detail li[data-list="ordered"],
+#project-detail li[data-list="ordered"] {
   list-style-type: decimal;
 }
-#blog-detail li, #blog-detail li {
+#blog-detail li, #blog-detail li,
+#project-detail li, #project-detail li {
   margin-left: 2rem;
   padding-left: 0.5rem;
 }
-#blog-detail li.ql-indent-1 {
+#blog-detail li.ql-indent-1,
+#project-detail li.ql-indent-1 {
   margin-left: 4rem;
   padding-left: 0.5rem;
 }

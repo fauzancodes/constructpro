@@ -47,7 +47,7 @@ const DetailPage = ({ slug }: Props) => {
 
   const headerData: { id: string; content: string }[] = [];
 
-  const processedBody = data?.body && data.body !== "" ? blog.body.replace(/<h[1-2]>(.*?)<\/h[1-2]>/g, (match: string, p1: string) => {
+  const processedBody = data?.body && data.body !== "" ? blog.body.replace(/<h[1-6]>(.*?)<\/h[1-6]>/g, (match: string, p1: string) => {
     const id = GenerateIdFromText(p1);
     headerData.push({ id, content: p1 });
     return `<h1 id="${id}">${p1}</h1>`;

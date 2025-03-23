@@ -1,5 +1,6 @@
 "use server";
 
+import { GenerateSlug } from "@/lib/utilities/common";
 import { Blog } from "@/types/common.types";
 import { PrismaClient } from "@prisma/client";
 
@@ -138,7 +139,7 @@ export const CreateBlog = async (createData: Blog) => {
   try {
     const dateISO = createData.date ? new Date(createData.date).toISOString() : null;
 
-    createData.slug = createData.title?.toLocaleLowerCase().replaceAll("?","").replaceAll("!","").replaceAll(",","").replaceAll(".","").replaceAll("'","").replaceAll(" ","-")
+    createData.slug = GenerateSlug(createData.title || "")
 
     const newData = await prisma.blog.create({
       data: {
@@ -177,7 +178,7 @@ export const UpdateBlog = async (updateData: Blog) => {
   try {
     const dateISO = updateData.date ? new Date(updateData.date).toISOString() : null;
 
-    updateData.slug = updateData.title?.toLocaleLowerCase().replaceAll("?","").replaceAll("!","").replaceAll(",","").replaceAll("'","").replaceAll(".","").replaceAll(" ","-")
+    updateData.slug = GenerateSlug(updateData.title || "")
 
     const updatedData = await prisma.blog.update({
       where: { id: updateData.id },

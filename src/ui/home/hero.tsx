@@ -76,25 +76,10 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
       >
-        {/* <AnimatePresence mode="wait">
-          <motion.h5 
-            className="font-medium text-xl mb-5 flex items-center"
-            variants={SlideUpVariant}
-            custom={0.2}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            key={data[index].title}
-          >
-            <hr className="md:hidden w-15 mr-5" />
-            SEJAK 2000
-            <hr className="w-15 ml-5" />
-          </motion.h5>
-        </AnimatePresence> */}
         <AnimatePresence mode="wait">
           <motion.h1
             key={data[index]?.title}
-            className="text-4xl md:text-5xl font-semibold mb-10 text-center md:text-start"
+            className="text-5xl md:text-6xl font-bold mb-10 text-center md:text-start"
             initial="hidden"
             animate="visible"
             exit="exit"
@@ -114,7 +99,7 @@ const Hero = () => {
           whileHover={{ scale: 1.1 }}
         >
           <Link href={"/services"} className="btn text-primary hover:btn-primary hover:text-primary-content btn-lg w-fit">
-            PELAJARI LEBIH LANJUT
+            Learn More
             <FaArrowUpRightFromSquare className="ml-3" />
           </Link>
         </motion.div>

@@ -75,7 +75,7 @@ const Detail = () => {
           variants={SlideUpVariant}
           custom={0}
         >
-          <button onClick={() => HandleServiceFilter("")} className="btn btn-ghost hover:btn-link text-lg p-0 h-fit">SEMUA</button>
+          <button onClick={() => HandleServiceFilter("")} className="btn btn-ghost hover:btn-link text-lg p-0 h-fit">ALL</button>
           {services.map((item, index) => (
             <button key={index} onClick={() => HandleServiceFilter(item.id)} className="btn btn-ghost hover:btn-link text-lg p-0 h-fit">{item.title.toLocaleUpperCase()}</button>
           ))}

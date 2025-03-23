@@ -1,10 +1,10 @@
 export const Menu = [
   {
-    name: "Penawaran",
+    name: "Quotation",
     path: "/dashboard/quotation",
   },
   {
-    name: "Beranda",
+    name: "Home",
     path: "#",
     children: [
       {
@@ -25,28 +25,28 @@ export const Menu = [
       }
     ]
   },{
-    name: "Tentang",
+    name: "About",
     path: "#",
     children: [
       {
-        name: "Tentang Kami",
+        name: "About Us",
         path: "/dashboard/about/about-us"
       },{
-        name: "Nilai Bisnis",
+        name: "Business Value",
         path: "/dashboard/about/business-values"
       },{
-        name: "Nilai kerja",
+        name: "Work Value",
         path: "/dashboard/about/work-values"
       },{
-        name: "Pencapaian",
+        name: "Achievement",
         path: "/dashboard/about/achievements"
       }
     ]
   },{
-    name: "Klien",
+    name: "Client",
     path: "/dashboard/clients",
   },{
-    name: "Layanan",
+    name: "Service",
     path: "/dashboard/services",
   },{
     name: "Portfolio",
@@ -59,19 +59,19 @@ export const Menu = [
         name: "Category",
         path: "/dashboard/blog/categories"
       },{
-        name: "Artikel",
+        name: "Article",
         path: "/dashboard/blog/articles"
       }
     ]
   },{
-    name: "Kontak",
+    name: "Contact",
     path: "#",
     children: [
       {
-        name: "Kontak",
+        name: "Contact",
         path: "/dashboard/contact/contacts"
       },{
-        name: "Media Sosial",
+        name: "Social Media",
         path: "/dashboard/contact/social-media"
       }
     ]

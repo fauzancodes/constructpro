@@ -1,9 +1,10 @@
 "use client"
 
+import { GetAllAboutUs } from "@/lib/repository/about/aboutUs";
 import { SignIn } from "@/lib/service/auth";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEnvelope } from "react-icons/fa6";
 
@@ -15,6 +16,29 @@ type LoginFormData = {
 type LoginError = string | null;
 
 const Login = () => {
+  const [isLoading, setIsLoading] = useState(true)
+  const [about, setAbout] = useState<any[]>([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setIsLoading(true);
+
+        const aboutData = await GetAllAboutUs("", 0, 0, "", "asc");
+        if (aboutData) {
+          setAbout(aboutData.data);
+        }
+
+        setIsLoading(false);
+      } catch (error) {
+        console.error("Error fetching contacts:", error);
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   const {
     register,
     handleSubmit,
@@ -49,7 +73,7 @@ const Login = () => {
 
   return (
     <div className="w-full h-screen flex justify-center items-center">
-      <Image src={"/images/pic (4).webp"} alt="Login" width={1000} height={1000} className="absolute -z-10 w-full h-full object-cover" />
+      <Image src={about[0]?.image1 || "/images/image-placeholder.webp"} alt="Login" width={1000} height={1000} className="absolute -z-10 w-full h-full object-cover" />
       <div className="absolute h-full w-full bg-neutral/75 -z-10"></div>
       <form onSubmit={handleSubmit(onSubmit)} className="bg-base-100 w-full md:w-4/12 p-10">
         <h1 className="font-semibold text-2xl text-center mb-5">Login</h1>

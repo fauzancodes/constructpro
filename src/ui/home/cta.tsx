@@ -106,7 +106,7 @@ const CTA = () => {
             custom={0.2}
           >
             <div>
-              <div className="bg-base-300 w-fit p-5 text-primary rounded-full">
+              <div className="bg-base-300 w-fit p-5 text-primary rounded-full mx-auto md:mx-0">
                 <FaUsers className="text-5xl" />
               </div>
             </div>
@@ -123,7 +123,7 @@ const CTA = () => {
             custom={0.4}
           >
             <div>
-              <div className="bg-base-300 w-fit p-5 text-primary rounded-full">
+              <div className="bg-base-300 w-fit p-5 text-primary rounded-full mx-auto md:mx-0">
                 <FaClock className="text-5xl" />
               </div>
             </div>

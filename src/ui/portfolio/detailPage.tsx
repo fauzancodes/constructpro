@@ -76,13 +76,13 @@ const DetailPage = ({ slug }: Props) => {
             <p className="text-xl font-medium">{service?.title}</p>
           </div>
         </div>}
-        {data.start || data.end && <div className={`flex items-center border border-base-300 ${!data.description && "w-full md:w-3/12"}`}>
+        {(Boolean(data.start) || Boolean(data.end)) && <div className={`flex items-center border border-base-300 ${!data.description && "w-full md:w-3/12"}`}>
           <FaCalendarDays className="m-5 text-3xl text-primary" />
           <div className={`p-5 bg-base-200 w-full h-full ${!data.description && "flex flex-col justify-center"}`}>
             <p className="text-xl">Durasi:</p>
             <p className="text-xl font-medium">
               {data.start && StringToDate(data.start)}
-              {data.start && data.end && "s.d."} 
+              {data.start && data.end && " to "} 
               {data.end && StringToDate(data.end)}
             </p>
           </div>
