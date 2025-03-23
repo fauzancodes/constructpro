@@ -16,23 +16,23 @@ type LoginFormData = {
 type LoginError = string | null;
 
 const Login = () => {
-  const [isLoading, setIsLoading] = useState(true)
+  // const [isLoading, setIsLoading] = useState(true)
   const [about, setAbout] = useState<any[]>([])
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        setIsLoading(true);
+        // setIsLoading(true);
 
         const aboutData = await GetAllAboutUs("", 0, 0, "", "asc");
         if (aboutData) {
           setAbout(aboutData.data);
         }
 
-        setIsLoading(false);
+        // setIsLoading(false);
       } catch (error) {
         console.error("Error fetching contacts:", error);
-        setIsLoading(false);
+        // setIsLoading(false);
       }
     };
 

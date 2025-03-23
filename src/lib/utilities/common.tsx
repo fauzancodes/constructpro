@@ -1,5 +1,4 @@
 import { FaBars, FaBriefcase, FaBuilding, FaCity, FaEnvelope, FaFacebook, FaGlobe, FaHouse, FaInstagram, FaLinkedin, FaNewspaper, FaPhoneVolume, FaTableColumns, FaTiktok, FaUsers, FaWhatsapp, FaYoutube } from "react-icons/fa6";
-import { text } from "stream/consumers";
 
 export function Capitalize(word: string): string {
   return word?.charAt(0).toUpperCase() + word?.slice(1).toLowerCase();
