@@ -62,7 +62,7 @@ const UpdateServices = ({params}: {params: Promise<{ id: string }>}) => {
     <MutationForm 
       onSubmit={handleUpdate}
       fields={ServiceFields()}
-      title="Layanan"
+      title="Service"
       isUpdate={!!selectedData}
       initialData={selectedData || {}}
       setSelected={setSelectedData}

@@ -60,7 +60,7 @@ const UpdateClients = ({params}: {params: Promise<{ id: string }>}) => {
     <MutationForm 
       onSubmit={handleUpdate}
       fields={ClientFields()}
-      title="Klien"
+      title="Client"
       isUpdate={!!selectedData}
       initialData={selectedData || {}}
       setSelected={setSelectedData}

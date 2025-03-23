@@ -25,7 +25,7 @@ const BlogCategorys = () => {
 
   const columns = [
     {
-      label: "Judul",
+      label: "Title",
       key: "title"
     },
     {
@@ -33,7 +33,7 @@ const BlogCategorys = () => {
       key: "status"
     },
     {
-      label: "Urutan",
+      label: "Order",
       key: "order"
     }
   ]
@@ -67,9 +67,9 @@ const BlogCategorys = () => {
       id: "select-status",
       ariaLabel: "Status",
       options: [
-        { value: "", label: "Semua" },
-        { value: "true", label: "Aktif" },
-        { value: "false", label: "Tidak Aktif" },
+        { value: "", label: "All" },
+        { value: "true", label: "Active" },
+        { value: "false", label: "Inactive" },
       ],
       action: setStatus
     },
@@ -78,9 +78,9 @@ const BlogCategorys = () => {
       id: "select-order",
       ariaLabel: "Order",
       options: [
-        { value: "updatedAt", label: "Terakhir Diubah" },
-        { value: "title", label: "Judul" },
-        { value: "order", label: "Urutan" },
+        { value: "updatedAt", label: "Last Updated" },
+        { value: "title", label: "Title" },
+        { value: "order", label: "Order" },
       ],
       action: setOrder
     },
@@ -89,8 +89,8 @@ const BlogCategorys = () => {
       id: "select-sort",
       ariaLabel: "Sort",
       options: [
-        { value: "desc", label: "Menurun" },
-        { value: "asc", label: "Menaik" },
+        { value: "desc", label: "Descending" },
+        { value: "asc", label: "Ascending" },
       ],
       action: setSort
     },
@@ -112,7 +112,7 @@ const BlogCategorys = () => {
   return (
     <>
       <TableHeader 
-        title="Kategori Blog"
+        title="Blog Categories"
         setSearch={setSearch} 
         setTotalPage={setTotalPage}
         setCurrentPage={setCurrentPage}

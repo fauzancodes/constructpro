@@ -28,23 +28,23 @@ const Portfolios = () => {
 
   const columns = [
     {
-      label: "Tanggal Mulai",
+      label: "Start Date",
       key: "start"
     },
     {
-      label: "Tanggal berakhir",
+      label: "End Date",
       key: "end"
     },
     {
-      label: "Judul",
+      label: "Title",
       key: "title"
     },
     {
-      label: "Nama Klien",
+      label: "Client Name",
       key: "client"
     },
     {
-      label: "Gambar",
+      label: "Image",
       key: "image1"
     },
     {
@@ -93,13 +93,13 @@ const Portfolios = () => {
 
   const filterOptions = [
     {
-      label: "Layanan",
+      label: "Service",
       id: "select-service",
-      ariaLabel: "Layanan",
+      ariaLabel: "Service",
       options: [
         {
           value: "",
-          label: "Semua"
+          label: "All"
         },
         ...services.map((item) => ({
           value: item.id, 
@@ -113,9 +113,9 @@ const Portfolios = () => {
       id: "select-status",
       ariaLabel: "Status",
       options: [
-        { value: "", label: "Semua" },
-        { value: "true", label: "Aktif" },
-        { value: "false", label: "Tidak Aktif" },
+        { value: "", label: "All" },
+        { value: "true", label: "Active" },
+        { value: "false", label: "Inactive" },
       ],
       action: setStatus
     },
@@ -124,9 +124,9 @@ const Portfolios = () => {
       id: "select-order",
       ariaLabel: "Order",
       options: [
-        { value: "updatedAt", label: "Terakhir Diubah" },
-        { value: "title", label: "Judul" },
-        { value: "order", label: "Urutan" },
+        { value: "updatedAt", label: "Last Updated" },
+        { value: "title", label: "Title" },
+        { value: "order", label: "Order" },
       ],
       action: setOrder
     },
@@ -135,8 +135,8 @@ const Portfolios = () => {
       id: "select-sort",
       ariaLabel: "Sort",
       options: [
-        { value: "desc", label: "Menurun" },
-        { value: "asc", label: "Menaik" },
+        { value: "desc", label: "Descending" },
+        { value: "asc", label: "Ascending" },
       ],
       action: setSort
     },
@@ -158,7 +158,7 @@ const Portfolios = () => {
   return (
     <>
       <TableHeader 
-        title="Portofolio"
+        title="Portofolios"
         setSearch={setSearch} 
         setTotalPage={setTotalPage}
         setCurrentPage={setCurrentPage}

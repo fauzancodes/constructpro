@@ -24,19 +24,19 @@ const WorkValues = () => {
 
   const columns = [
     {
-      label: "Deskripsi",
+      label: "Description",
       key: "description"
     },{
-      label: "Sub Judul 1",
+      label: "Subtitle 1",
       key: "subtitle1"
     },{
-      label: "Sub Judul 2",
+      label: "Subtitle 2",
       key: "subtitle2"
     },{
       label: "Call To Action 1",
       key: "callToAction1"
     },{
-      label: "Gambar",
+      label: "Image",
       key: "image"
     },
   ]
@@ -67,7 +67,7 @@ const WorkValues = () => {
   return (
     <>
       <TableHeader 
-        title="Nilai Kerja"
+        title="Work Values"
         setSearch={setSearch} 
         setTotalPage={setTotalPage}
         setCurrentPage={setCurrentPage}

@@ -24,13 +24,13 @@ const BusinessValues = () => {
 
   const columns = [
     {
-      label: "Judul",
+      label: "Title",
       key: "title"
     },{
-      label: "Deskripsi",
+      label: "Description",
       key: "description"
     },{
-      label: "Urutan",
+      label: "Order",
       key: "order"
     },
   ]
@@ -64,9 +64,9 @@ const BusinessValues = () => {
       id: "select-order",
       ariaLabel: "Order",
       options: [
-        { value: "updatedAt", label: "Terakhir Diubah" },
-        { value: "title", label: "Judul" },
-        { value: "order", label: "Urutan" },
+        { value: "updatedAt", label: "Last Updated" },
+        { value: "title", label: "Title" },
+        { value: "order", label: "Order" },
       ],
       action: setOrder
     },
@@ -75,8 +75,8 @@ const BusinessValues = () => {
       id: "select-sort",
       ariaLabel: "Sort",
       options: [
-        { value: "desc", label: "Menurun" },
-        { value: "asc", label: "Menaik" },
+        { value: "desc", label: "Descending" },
+        { value: "asc", label: "Ascending" },
       ],
       action: setSort
     },
@@ -85,7 +85,7 @@ const BusinessValues = () => {
   return (
     <>
       <TableHeader 
-        title="Nilai Bisnis"
+        title="Business Values"
         setSearch={setSearch} 
         setTotalPage={setTotalPage}
         setCurrentPage={setCurrentPage}

@@ -59,7 +59,7 @@ const UpdateSocialMedias = ({params}: {params: Promise<{ id: string }>}) => {
     <MutationForm 
       onSubmit={handleUpdate}
       fields={SocialMediaFields()}
-      title="Media Sosial"
+      title="Social Media"
       isUpdate={!!selectedData}
       initialData={selectedData || {}}
       setSelected={setSelectedData}

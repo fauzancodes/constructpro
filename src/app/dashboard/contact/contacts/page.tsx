@@ -24,11 +24,11 @@ const Contacts = () => {
 
   const columns = [
     {
-      label: "Judul",
+      label: "Title",
       key: "title"
     },
     {
-      label: "Deskripsi",
+      label: "Description",
       key: "description"
     },
     {
@@ -36,7 +36,7 @@ const Contacts = () => {
       key: "link"
     },
     {
-      label: "Gambar",
+      label: "Image",
       key: "image"
     }
   ]
@@ -70,8 +70,8 @@ const Contacts = () => {
       id: "select-order",
       ariaLabel: "Order",
       options: [
-        { value: "updatedAt", label: "Terakhir Diubah" },
-        { value: "title", label: "Judul" },
+        { value: "updatedAt", label: "Last Updated" },
+        { value: "title", label: "Title" },
       ],
       action: setOrder
     },
@@ -80,8 +80,8 @@ const Contacts = () => {
       id: "select-sort",
       ariaLabel: "Sort",
       options: [
-        { value: "desc", label: "Menurun" },
-        { value: "asc", label: "Menaik" },
+        { value: "desc", label: "Descending" },
+        { value: "asc", label: "Ascending" },
       ],
       action: setSort
     },
@@ -90,7 +90,7 @@ const Contacts = () => {
   return (
     <>
       <TableHeader 
-        title="Kontak"
+        title="Contacts"
         setSearch={setSearch} 
         setTotalPage={setTotalPage}
         setCurrentPage={setCurrentPage}

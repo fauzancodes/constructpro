@@ -47,7 +47,7 @@ const CreateBlogs = () => {
     <MutationForm 
       onSubmit={handleCreate}
       fields={BlogFields(categories)}
-      title="Artikel Blog"
+      title="Blog Article"
       isUpdate={!!selectedData}
       initialData={selectedData || {}}
       setSelected={setSelectedData}

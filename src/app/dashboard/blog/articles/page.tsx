@@ -28,23 +28,23 @@ const Blogs = () => {
 
   const columns = [
     {
-      label: "Tanggal",
+      label: "Date",
       key: "date"
     },
     {
-      label: "Judul",
+      label: "Title",
       key: "title"
     },
     {
-      label: "Penulis",
+      label: "Author",
       key: "author"
     },
     {
-      label: "Deskripsi",
+      label: "Description",
       key: "description"
     },
     {
-      label: "Gambar",
+      label: "Image",
       key: "image"
     },
     {
@@ -93,13 +93,13 @@ const Blogs = () => {
 
   const filterOptions = [
     {
-      label: "Kategori",
+      label: "Category",
       id: "select-category",
-      ariaLabel: "Kategori",
+      ariaLabel: "Category",
       options: [
         {
           value: "",
-          label: "Semua"
+          label: "All"
         },
         ...categories.map((item) => ({
           value: item.id, 
@@ -113,9 +113,9 @@ const Blogs = () => {
       id: "select-status",
       ariaLabel: "Status",
       options: [
-        { value: "", label: "Semua" },
-        { value: "true", label: "Aktif" },
-        { value: "false", label: "Tidak Aktif" },
+        { value: "", label: "All" },
+        { value: "true", label: "Active" },
+        { value: "false", label: "Inactive" },
       ],
       action: setStatus
     },
@@ -124,9 +124,9 @@ const Blogs = () => {
       id: "select-order",
       ariaLabel: "Order",
       options: [
-        { value: "updatedAt", label: "Terakhir Diubah" },
-        { value: "title", label: "Judul" },
-        { value: "order", label: "Urutan" },
+        { value: "updatedAt", label: "Last Updated" },
+        { value: "title", label: "Title" },
+        { value: "order", label: "Order" },
       ],
       action: setOrder
     },
@@ -135,8 +135,8 @@ const Blogs = () => {
       id: "select-sort",
       ariaLabel: "Sort",
       options: [
-        { value: "desc", label: "Menurun" },
-        { value: "asc", label: "Menaik" },
+        { value: "desc", label: "Descending" },
+        { value: "asc", label: "Ascending" },
       ],
       action: setSort
     },
@@ -158,7 +158,7 @@ const Blogs = () => {
   return (
     <>
       <TableHeader 
-        title="Artikel Blog"
+        title="Blog Articles"
         setSearch={setSearch} 
         setTotalPage={setTotalPage}
         setCurrentPage={setCurrentPage}

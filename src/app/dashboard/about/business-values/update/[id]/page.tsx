@@ -61,7 +61,7 @@ const UpdateBusinessValues = ({params}: {params: Promise<{ id: string }>}) => {
     <MutationForm 
       onSubmit={handleUpdate}
       fields={BusinessValueFields()}
-      title="Nilai Bisnis"
+      title="Business Value"
       isUpdate={!!selectedData}
       initialData={selectedData || {}}
       setSelected={setSelectedData}

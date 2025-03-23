@@ -24,10 +24,10 @@ const Achievements = () => {
 
   const columns = [
     {
-      label: "Judul",
+      label: "Title",
       key: "title"
     },{
-      label: "Jumlah",
+      label: "Total",
       key: "total"
     },
   ]
@@ -61,9 +61,9 @@ const Achievements = () => {
       id: "select-order",
       ariaLabel: "Order",
       options: [
-        { value: "updatedAt", label: "Terakhir Diubah" },
-        { value: "title", label: "Judul" },
-        { value: "total", label: "Jumlah" },
+        { value: "updatedAt", label: "Last Updated" },
+        { value: "title", label: "Title" },
+        { value: "total", label: "Total" },
       ],
       action: setOrder
     },
@@ -72,8 +72,8 @@ const Achievements = () => {
       id: "select-sort",
       ariaLabel: "Sort",
       options: [
-        { value: "desc", label: "Menurun" },
-        { value: "asc", label: "Menaik" },
+        { value: "desc", label: "Descending" },
+        { value: "asc", label: "Ascending" },
       ],
       action: setSort
     },
@@ -82,7 +82,7 @@ const Achievements = () => {
   return (
     <>
       <TableHeader 
-        title="Pencapaian"
+        title="Achievement"
         setSearch={setSearch} 
         setTotalPage={setTotalPage}
         setCurrentPage={setCurrentPage}

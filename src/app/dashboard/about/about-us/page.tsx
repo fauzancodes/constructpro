@@ -24,11 +24,11 @@ const AboutUss = () => {
 
   const columns = [
     {
-      label: "Judul",
+      label: "Title",
       key: "title"
     },
     {
-      label: "Deskripsi",
+      label: "Description",
       key: "description"
     },
     {
@@ -36,15 +36,15 @@ const AboutUss = () => {
       key: "callToAction"
     },
     {
-      label: "Gambar 1",
+      label: "Image 1",
       key: "image1"
     },
     {
-      label: "Gambar 2",
+      label: "Image 2",
       key: "image2"
     },
     {
-      label: "Gambar 3",
+      label: "Image 3",
       key: "image3"
     },
   ]
@@ -75,7 +75,7 @@ const AboutUss = () => {
   return (
     <>
       <TableHeader 
-        title="Tentang Kami"
+        title="About Us"
         setSearch={setSearch} 
         setTotalPage={setTotalPage}
         setCurrentPage={setCurrentPage}

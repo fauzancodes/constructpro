@@ -24,11 +24,11 @@ const CallToActions = () => {
 
   const columns = [
     {
-      label: "Judul",
+      label: "Title",
       key: "title"
     },
     {
-      label: "Deskripsi",
+      label: "Description",
       key: "description"
     },
     {
@@ -40,27 +40,27 @@ const CallToActions = () => {
       key: "callToAction2"
     },
     {
-      label: "Gambar 1",
+      label: "Image 1",
       key: "image1"
     },
     {
-      label: "Gambar 2",
+      label: "Image 2",
       key: "image2"
     },
     // {
-    //   label: "Gambar 3",
+    //   label: "Image 3",
     //   key: "image3"
     // },
     // {
-    //   label: "Gambar 4",
+    //   label: "Image 4",
     //   key: "image4"
     // },
     // {
-    //   label: "Gambar 5",
+    //   label: "Image 5",
     //   key: "image5"
     // },
     // {
-    //   label: "Gambar 6",
+    //   label: "Image 6",
     //   key: "image6"
     // }
   ]

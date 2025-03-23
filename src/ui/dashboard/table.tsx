@@ -38,7 +38,7 @@ const DynamicTable: React.FC<TableProps> = ({
     return <Loading />;
   }
   if (data.length === 0) {
-    return <p className="text-center md:text-left md:!ml-5 opacity-30">Tidak ada data untuk ditampilkan</p>;
+    return <p className="text-center md:text-left md:!ml-5 opacity-30">No data to display.</p>;
   }
 
 
@@ -85,11 +85,11 @@ const DynamicTable: React.FC<TableProps> = ({
                     ) : col.key === "status" ? (
                       cellValue === "true" ? (
                         <div className="bg-success text-success-content font-medium p-2 text-center w-22">
-                          Aktif
+                          Active
                         </div>
                       ) : (
                         <div className="bg-error text-error-content font-medium p-2 text-center w-22">
-                          Tidak Aktif
+                          Inactive
                         </div>
                       )
                     ) : cellValue.includes("<p>") ? (
@@ -141,7 +141,7 @@ const DynamicTable: React.FC<TableProps> = ({
                             (document.getElementById(detailModalId) as HTMLDialogElement)?.showModal()
                           }
                         }
-                        ><FaCircleInfo /> Lihat</button>
+                        ><FaCircleInfo /> Details</button>
                       </li>
                     )}
                   </ul>

@@ -30,7 +30,7 @@ const CreateServices = () => {
     <MutationForm 
       onSubmit={handleCreate}
       fields={ServiceFields()}
-      title="Layanan"
+      title="Service"
       isUpdate={!!selectedData}
       initialData={selectedData || {}}
       setSelected={setSelectedData}

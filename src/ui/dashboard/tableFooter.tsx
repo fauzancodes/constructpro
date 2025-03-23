@@ -48,8 +48,8 @@ const TableFooter: React.FC<TableFooterProps> = ({
       }
       {totalPage > 1 &&
         <div className="flex flex-wrap justify-between items-center gap-3 w-full md:w-fit">
-          <select defaultValue="Per page" onChange={handlePerPage} className="select w-fit">
-            <option disabled={true}>Per page</option>
+          <select defaultValue="Limit" onChange={handlePerPage} className="select w-fit">
+            <option disabled={true}>Limit</option>
             <option value={7}>7</option>
             <option value={14}>14</option>
             <option value={21}>21</option>

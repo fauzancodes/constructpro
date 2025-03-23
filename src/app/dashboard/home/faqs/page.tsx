@@ -24,15 +24,15 @@ const FAQs = () => {
 
   const columns = [
     {
-      label: "Pertanyaan",
+      label: "Question",
       key: "question"
     },
     {
-      label: "Jawaban",
+      label: "Answer",
       key: "answer"
     },
     {
-      label: "Urutan",
+      label: "Order",
       key: "order"
     }
   ]
@@ -66,9 +66,9 @@ const FAQs = () => {
       id: "select-order",
       ariaLabel: "Order",
       options: [
-        { value: "updatedAt", label: "Terakhir Diubah" },
-        { value: "question", label: "Pertanyaan" },
-        { value: "order", label: "Urutan" },
+        { value: "updatedAt", label: "Last Updated" },
+        { value: "question", label: "Question" },
+        { value: "order", label: "Order" },
       ],
       action: setOrder
     },
@@ -77,8 +77,8 @@ const FAQs = () => {
       id: "select-sort",
       ariaLabel: "Sort",
       options: [
-        { value: "desc", label: "Menurun" },
-        { value: "asc", label: "Menaik" },
+        { value: "desc", label: "Descending" },
+        { value: "asc", label: "Ascending" },
       ],
       action: setSort
     },

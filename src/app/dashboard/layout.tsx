@@ -13,7 +13,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     const checkAuth = async () => {
-      const token = localStorage.getItem("gemakaryamakmur_token");
+      const token = localStorage.getItem("constructpro_token");
       
       if (!token) {
         console.log("token not found")
@@ -27,14 +27,14 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
         if (decoded && decoded.exp < currentTime) {
           console.log("token is expired")
-          localStorage.removeItem("gemakaryamakmur_token");
+          localStorage.removeItem("constructpro_token");
           router.push("/login");
           return;
         }
 
         if (!decoded) {
           console.log("invalid token")
-          localStorage.removeItem("gemakaryamakmur_token");
+          localStorage.removeItem("constructpro_token");
           router.push("/login");
           return;
         }
@@ -44,7 +44,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         
         if (!user) {
           console.log("user not found")
-          localStorage.removeItem("gemakaryamakmur_token");
+          localStorage.removeItem("constructpro_token");
           router.push("/login");
           return;
         }
@@ -52,7 +52,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         setIsLoading(false);
       } catch (error) {
         console.error("Error validating token", error);
-        localStorage.removeItem("gemakaryamakmur_token");
+        localStorage.removeItem("constructpro_token");
         router.push("/login");
       }
     };
@@ -69,10 +69,17 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   }
 
   return (
-    <div className="w-full h-screen p-2 md:p-3 flex">
-      <SideNav />
-      <div className="w-full bg-base-300 rounded-box ml-2 md:ml-5 overflow-y-auto p-2 md:p-3 shadow">{children}</div>
-    </div>
+    <>
+      <p className="h-screen w-full flex md:hidden justify-center items-center text-center p-5 text-2xl font-medium">
+        ⚠️⚠️⚠️⚠️⚠️<br/><br/>
+        Page for small screen is not available, please open with larger screen<br/><br/>
+        ⚠️⚠️⚠️⚠️⚠️
+      </p>
+      <div className="w-full h-screen p-2 md:p-3 md:flex hidden">
+        <SideNav />
+        <div className="w-full bg-base-300 rounded-box ml-2 md:ml-5 overflow-y-auto p-2 md:p-3 shadow">{children}</div>
+      </div>
+    </>
   )
 }
 

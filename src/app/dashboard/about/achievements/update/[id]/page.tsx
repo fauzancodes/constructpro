@@ -60,7 +60,7 @@ const UpdateAchievements = ({params}: {params: Promise<{ id: string }>}) => {
     <MutationForm 
       onSubmit={handleUpdate}
       fields={AchievementFields()}
-      title="Pencapaian"
+      title="Achievement"
       isUpdate={!!selectedData}
       initialData={selectedData || {}}
       setSelected={setSelectedData}

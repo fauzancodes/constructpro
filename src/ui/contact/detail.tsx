@@ -107,7 +107,7 @@ const Detail = () => {
         variants={SlideUpVariant}
         custom={0}
       >
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.3618649086106!2d106.74840789972231!3d-6.214233363179806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f736873369cb%3A0xa08ec1124c4d412d!2sGEMA%20KARYA%20MAKMUR!5e1!3m2!1sen!2sid!4v1740448078664!5m2!1sen!2sid" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="w-full h-[30rem]"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253840.49131638702!2d106.66470516517266!3d-6.229720928946075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e945e34b9d%3A0x5371bf0fdad786a2!2sJakarta!5e0!3m2!1sen!2sid!4v1742708551690!5m2!1sen!2sid" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="w-full h-[30rem]"></iframe>
       </motion.div>
     </div>
   )

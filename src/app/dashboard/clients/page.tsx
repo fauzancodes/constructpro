@@ -24,7 +24,7 @@ const Clients = () => {
 
   const columns = [
     {
-      label: "Nama",
+      label: "Name",
       key: "name"
     },
     {
@@ -32,7 +32,7 @@ const Clients = () => {
       key: "image"
     },
     {
-      label: "Urutan",
+      label: "Order",
       key: "order"
     }
   ]
@@ -66,9 +66,9 @@ const Clients = () => {
       id: "select-order",
       ariaLabel: "Order",
       options: [
-        { value: "updatedAt", label: "Terakhir Diubah" },
-        { value: "name", label: "Nama" },
-        { value: "order", label: "Urutan" },
+        { value: "updatedAt", label: "Last Updated" },
+        { value: "name", label: "Name" },
+        { value: "order", label: "Order" },
       ],
       action: setOrder
     },
@@ -77,8 +77,8 @@ const Clients = () => {
       id: "select-sort",
       ariaLabel: "Sort",
       options: [
-        { value: "desc", label: "Menurun" },
-        { value: "asc", label: "Menaik" },
+        { value: "desc", label: "Descending" },
+        { value: "asc", label: "Ascending" },
       ],
       action: setSort
     },
@@ -100,7 +100,7 @@ const Clients = () => {
   return (
     <>
       <TableHeader 
-        title="Klien"
+        title="Clients"
         setSearch={setSearch} 
         setTotalPage={setTotalPage}
         setCurrentPage={setCurrentPage}

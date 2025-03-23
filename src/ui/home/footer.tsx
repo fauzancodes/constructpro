@@ -78,7 +78,7 @@ const Footer = () => {
 
   return (
     <div className="w-full bg-base-200 px-5 md:px-10 border-t-5 border-primary">
-      {isLoading ? (
+      {isLoading || about.length === 0 ? (
         <FooterSkeleton />
       ) : (
         <div className="py-20 flex flex-wrap gap-y-10 md:gap-y-0">
@@ -184,7 +184,7 @@ const Footer = () => {
       )}
       <div className="py-5 md:py-10 border-t border-base-300 flex flex-wrap items-center justify-between font-medium">
         <p className="mb-3 md:mb-0">
-          &copy; {new Date().getFullYear()} Gema Karya Makmur. All rights reserved.
+          &copy; {new Date().getFullYear()} ConstructPro. All rights reserved.
         </p>
         <div className="flex flex-col md:flex-row md:gap-5">
           <Link href={`#`} className="btn btn-ghost hover:btn-link text-[16px] p-0 h-fit">Syarat Dan Ketentuan</Link>

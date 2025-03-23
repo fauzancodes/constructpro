@@ -63,7 +63,7 @@ const UpdateAboutUss = ({params}: {params: Promise<{ id: string }>}) => {
     <MutationForm 
       onSubmit={handleUpdate}
       fields={AboutUsFields()}
-      title="Tentang Kami"
+      title="About Us"
       isUpdate={!!selectedData}
       initialData={selectedData || {}}
       setSelected={setSelectedData}

@@ -3,9 +3,8 @@ import { SelectMenuIcon } from "@/lib/utilities/common";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
-import { FaPowerOff } from "react-icons/fa6";
+import { FaCity, FaPowerOff } from "react-icons/fa6";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-import Image from "next/image";
 
 const SideNav = () => {
   const [isLoadingButton, setIsLoadingButton] = useState(false);
@@ -22,7 +21,10 @@ const SideNav = () => {
 
   return (
     <ul className="menu menu-lg flex-nowrap bg-base-300 rounded-box md:w-60 h-full shadow p-3 overflow-auto">
-      <Image src={"/images/gkm_icon.png"} alt="Gema Karya Makmur" width={500} height={500} />
+      <Link href={"/"} className="text-3xl font-bold md:flex flex-col items-center mb-5 hidden">
+        <FaCity className="text-7xl text-primary" />
+        ConstructPro
+      </Link>
       {Menu.map((value, index) => (
         <li key={index} className="my-2">
           {value.children ? (
@@ -72,7 +74,7 @@ const SideNav = () => {
           className="btn btn-neutral my-2"
           onClick={() => {
             setIsLoadingButton(true);
-            localStorage.removeItem("gemakaryamakmur_token");
+            localStorage.removeItem("constructpro_token");
             router.push("/login");
           }}
         >

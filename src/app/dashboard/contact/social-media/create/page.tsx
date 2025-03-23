@@ -30,7 +30,7 @@ const CreateSocialMedias = () => {
     <MutationForm 
       onSubmit={handleCreate}
       fields={SocialMediaFields()}
-      title="Media Sosial"
+      title="Social Media"
       isUpdate={!!selectedData}
       initialData={selectedData || {}}
       setSelected={setSelectedData}

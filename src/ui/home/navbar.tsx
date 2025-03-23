@@ -2,13 +2,13 @@
 
 import { GetAllContacts } from "@/lib/repository/contact/contact";
 import { motion  } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react";
 import { NavbarHeaderSkeleton } from "@/ui/home/loading";
 import { GetAllSocialMedias } from "@/lib/repository/contact/socialMedia";
 import { SelectSocialMediaIcon } from "@/lib/utilities/common";
+import { FaCity } from "react-icons/fa6";
 
 
 const Navbar = () => {
@@ -45,7 +45,7 @@ const Navbar = () => {
 
   return (
     <>
-      {isLoading ? (
+      {isLoading || contact.length === 0 ? (
         <NavbarHeaderSkeleton />
       ) : (
         <div className="w-full bg-neutral text-neutral-content px-3 md:px-15 py-3 text-sm flex flex-wrap justify-between items-center">
@@ -72,10 +72,7 @@ const Navbar = () => {
               <NavbarItems />
             </ul>
           </div>
-          <Link href={`/`} className="text-2xl font-semibold hidden md:block">
-            <Image src={"/images/gkm_icon.png"} alt="Gema Karya Makmur" width={500} height={500} className="h-15 w-fit object-contain" />
-          </Link>
-          <Link href={`/`} className="text-2xl font-semibold md:hidden">GKM</Link>
+          <Link href={`/`} className="text-2xl font-semibold flex items-center gap-3"><FaCity className="hidden md:block"/> ConstructPro</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">

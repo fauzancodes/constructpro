@@ -150,14 +150,14 @@ const Detail = () => {
           <p className="validator-hint hidden">Mohon masukan nomor handphone yang valid</p>
         </fieldset>
         <fieldset className="fieldset">
-          <legend className="fieldset-legend text-lg">Judul:</legend>
+          <legend className="fieldset-legend text-lg">Title:</legend>
           <label className="input validator w-full">
             <input onChange={handleChange} type="input" name="title" value={formData.title ?? ""} placeholder="Konsultasi Pembangunan Perumahan" required/>
           </label>
           <div className="validator-hint hidden">Mohon masukan judul</div>
         </fieldset>
         <fieldset className="fieldset">
-          <legend className="fieldset-legend text-lg">Deskripsi:</legend>
+          <legend className="fieldset-legend text-lg">Description:</legend>
           <textarea onChange={handleChange} name="description" value={formData.description ?? ""} className="textarea h-80 w-full" placeholder="Saya ingin membuat perumahan mewah dengan kualitas terbaik!"></textarea>
         </fieldset>
         <div className="w-full flex justify-center mt-5">

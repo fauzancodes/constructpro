@@ -190,13 +190,13 @@ const MutationForm: React.FC<MutationFormProps> = ({
                       ? formData[key] === true
                         ? "true"
                         : "false"
-                      : formData[key] || "Pilih salah satu"
+                      : formData[key] || "Select one"
                   }
                   onChange={handleChange}
                   className="select w-full"
                   required={config.required}
                 >
-                  <option disabled={true}>Pilih salah satu</option>
+                  <option disabled={true}>Select one</option>
                   {config.options?.map((option, index) => (
                     <option key={index} value={option.value}>
                       {option.label}
@@ -278,8 +278,8 @@ const MutationForm: React.FC<MutationFormProps> = ({
           );
         })}
         <div className="w-full flex flex-wrap mt-10 md:mt-5 justify-center items-center gap-5">
-          <button type="submit" className="btn btn-primary w-full md:w-32" disabled={imagePreviewLoading}>Simpan</button>
-          {!isUpdate && <button type="button" className="btn w-full md:w-32" onClick={handleReset}>Atur Ulang</button>}
+          <button type="submit" className="btn btn-primary w-full md:w-32" disabled={imagePreviewLoading}>Save</button>
+          {!isUpdate && <button type="button" className="btn w-full md:w-32" onClick={handleReset}>Reset</button>}
         </div>
       </form>
     </div>

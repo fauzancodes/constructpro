@@ -84,7 +84,7 @@ const UpdateBlogs = ({params}: {params: Promise<{ id: string }>}) => {
     <MutationForm 
       onSubmit={handleUpdate}
       fields={BlogFields(categories)}
-      title="Artikel Blog"
+      title="Blog Article"
       isUpdate={!!selectedData}
       initialData={selectedData || {}}
       setSelected={setSelectedData}

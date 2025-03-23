@@ -24,7 +24,7 @@ const SocialMedias = () => {
 
   const columns = [
     {
-      label: "Judul",
+      label: "Title",
       key: "title"
     },
     {
@@ -62,8 +62,8 @@ const SocialMedias = () => {
       id: "select-order",
       ariaLabel: "Order",
       options: [
-        { value: "updatedAt", label: "Terakhir Diubah" },
-        { value: "title", label: "Judul" },
+        { value: "updatedAt", label: "Last Updated" },
+        { value: "title", label: "Title" },
       ],
       action: setOrder
     },
@@ -72,8 +72,8 @@ const SocialMedias = () => {
       id: "select-sort",
       ariaLabel: "Sort",
       options: [
-        { value: "desc", label: "Menurun" },
-        { value: "asc", label: "Menaik" },
+        { value: "desc", label: "Descending" },
+        { value: "asc", label: "Ascending" },
       ],
       action: setSort
     },
@@ -95,7 +95,7 @@ const SocialMedias = () => {
   return (
     <>
       <TableHeader 
-        title="Media Sosial"
+        title="Social Media"
         setSearch={setSearch} 
         setTotalPage={setTotalPage}
         setCurrentPage={setCurrentPage}

@@ -5,12 +5,12 @@ export const PageHeaderFields = () => {
   const fields = {
     title: {
       value: "",
-      label: "Judul",
+      label: "Title",
       required: true,
     },
     image: {
       value: "",
-      label: "Gambar",
+      label: "Image",
       type: "file" as "file"
     },
     code: {
@@ -27,17 +27,17 @@ export const ImageSliderFields = () => {
   const fields = {
     title: {
       value: "",
-      label: "Judul",
+      label: "Title",
       required: true,
     },
     image: {
       value: "",
-      label: "Gambar",
+      label: "Image",
       type: "file" as "file"
     },
     order: {
       value: "",
-      label: "Urutan",
+      label: "Order",
       required: true,
       type: "number" as "number"
     },
@@ -50,12 +50,12 @@ export const CallToActionFields = () => {
   const fields = {
     title: {
       value: "",
-      label: "Judul",
+      label: "Title",
       required: true,
     },
     description: {
       value: "",
-      label: "Deskripsi",
+      label: "Description",
       required: true,
     },
     callToAction1: {
@@ -70,32 +70,32 @@ export const CallToActionFields = () => {
     },
     image1: {
       value: "",
-      label: "Gambar 1",
+      label: "Image 1",
       type: "file" as "file"
     },
     image2: {
       value: "",
-      label: "Gambar 2",
+      label: "Image 2",
       type: "file" as "file"
     },
     image3: {
       value: "",
-      label: "Gambar 3",
+      label: "Image 3",
       type: "file" as "file"
     },
     image4: {
       value: "",
-      label: "Gambar 4",
+      label: "Image 4",
       type: "file" as "file"
     },
     image5: {
       value: "",
-      label: "Gambar 5",
+      label: "Image 5",
       type: "file" as "file"
     },
     image6: {
       value: "",
-      label: "Gambar 6",
+      label: "Image 6",
       type: "file" as "file"
     },
   };
@@ -107,18 +107,18 @@ export const FAQFields = () => {
   const fields = {
     question: {
       value: "",
-      label: "Pertanyaan",
+      label: "Question",
       required: true,
     },
     order: {
       value: "",
-      label: "Urutan",
+      label: "Order",
       required: true,
       type: "number" as "number"
     },
     answer: {
       value: "",
-      label: "Jawaban",
+      label: "Answer",
       required: true,
       type: "textarea" as "textarea"
     },
@@ -131,7 +131,7 @@ export const SectionHeaderFields = () => {
   const fields = {
     title: {
       value: "",
-      label: "Judul",
+      label: "Title",
       required: true,
     },
     code: {
@@ -148,7 +148,7 @@ export const AboutUsFields = () => {
   const fields = {
     title: {
       value: "",
-      label: "Judul",
+      label: "Title",
       required: true,
     },
     callToAction: {
@@ -158,23 +158,23 @@ export const AboutUsFields = () => {
     },
     description: {
       value: "",
-      label: "Deskripsi",
+      label: "Description",
       required: true,
       type: "texteditor" as "texteditor"
     },
     image1: {
       value: "",
-      label: "Gambar 1",
+      label: "Image 1",
       type: "file" as "file"
     },
     image2: {
       value: "",
-      label: "Gambar 2",
+      label: "Image 2",
       type: "file" as "file"
     },
     image3: {
       value: "",
-      label: "Gambar 3",
+      label: "Image 3",
       type: "file" as "file"
     },
   };
@@ -186,18 +186,18 @@ export const BusinessValueFields = () => {
   const fields = {
     title: {
       value: "",
-      label: "Judul",
+      label: "Title",
       required: true,
     },
     order: {
       value: "",
-      label: "Urutan",
+      label: "Order",
       required: true,
       type: "number" as "number"
     },
     description: {
       value: "",
-      label: "Deskripsi",
+      label: "Description",
       required: true,
       type: "textarea" as "textarea"
     },
@@ -215,29 +215,29 @@ export const WorkValueFields = () => {
   const fields = {
     description: {
       value: "",
-      label: "Deskripsi",
+      label: "Description",
       required: true,
       type: "textarea" as "textarea"
     },
     subtitle1: {
       value: "",
-      label: "Sub Judul 1",
+      label: "Subtitle 1",
       required: true,
     },
     subtitle2: {
       value: "",
-      label: "Sub Judul 2",
+      label: "Subtitle 2",
       required: true,
     },
     subdescription1: {
       value: "",
-      label: "Sub Deskripsi 1",
+      label: "Subdescription 1",
       required: true,
       type: "textarea" as "textarea"
     },
     subdescription2: {
       value: "",
-      label: "Sub Deskripsi 2",
+      label: "Subdescription 2",
       required: true,
       type: "textarea" as "textarea"
     },
@@ -253,7 +253,7 @@ export const WorkValueFields = () => {
     },
     image: {
       value: "",
-      label: "Gambar",
+      label: "Image",
       type: "file" as "file"
     },
   };
@@ -265,12 +265,12 @@ export const AchievementFields = () => {
   const fields = {
     title: {
       value: "",
-      label: "Judul",
+      label: "Title",
       required: true,
     },
     total: {
       value: "",
-      label: "Jumlah",
+      label: "Total",
       required: true,
       type: "number" as "number"
     },
@@ -288,7 +288,7 @@ export const ClientFields = () => {
   const fields = {
     name: {
       value: "",
-      label: "Nama",
+      label: "Name",
       required: true,
     },
     image: {
@@ -299,7 +299,7 @@ export const ClientFields = () => {
     },
     order: {
       value: "",
-      label: "Urutan",
+      label: "Order",
       required: true,
       type: "number" as "number"
     },
@@ -312,7 +312,7 @@ export const ServiceFields = () => {
   const fields = {
     title: {
       value: "",
-      label: "Judul",
+      label: "Title",
       required: true,
     },
     status: {
@@ -323,27 +323,27 @@ export const ServiceFields = () => {
       options: [
         {
           value: "true",
-          label: "Aktif"
+          label: "Active"
         },{
           value: "false",
-          label: "Tidak Aktif"
+          label: "Inactive"
         }
       ],
     },
     order: {
       value: "",
-      label: "Urutan",
+      label: "Order",
       required: true,
       type: "number" as "number"
     },
     description: {
       value: "",
-      label: "Deskripsi",
+      label: "Description",
       type: "textarea" as "textarea"
     },
     image: {
       value: "",
-      label: "Gambar",
+      label: "Image",
       type: "file" as "file"
     },
   };
@@ -355,22 +355,22 @@ export const PortfolioFields = (services: Service[]) => {
   const fields = {
     start: {
       value: "",
-      label: "Tanggal Mulai",
+      label: "Start Date",
       type: "date" as "date",
     },
     end: {
       value: "",
-      label: "Tanggal Berakhir",
+      label: "End Date",
       type: "date" as "date",
     },
     serviceId: {
       value: 0,
-      label: "Layanan",
+      label: "Service",
       type: "select" as "select",
       options: [
         {
           value: 0,
-          label: "Tidak Ada"
+          label: "Nothing"
         },
         ...services.map((item) => ({
           value: item.id, 
@@ -386,80 +386,80 @@ export const PortfolioFields = (services: Service[]) => {
       options: [
         {
           value: "true",
-          label: "Aktif"
+          label: "Active"
         },{
           value: "false",
-          label: "Tidak Aktif"
+          label: "Inactive"
         }
       ],
     },
     title: {
       value: "",
-      label: "Judul",
+      label: "Title",
       required: true,
     },
     client: {
       value: "",
-      label: "Nama Klien",
+      label: "Client Name",
     },
     address: {
       value: "",
-      label: "Alamat Klien",
+      label: "Client Address",
       type: "textarea" as "textarea",
     },
     description: {
       value: "",
-      label: "Deskripsi",
+      label: "Description",
       type: "texteditor" as "texteditor",
     },
     image1: {
       value: "",
-      label: "Gambar 1",
+      label: "Image 1",
       type: "file" as "file"
     },
     image2: {
       value: "",
-      label: "Gambar 2",
+      label: "Image 2",
       type: "file" as "file"
     },
     image3: {
       value: "",
-      label: "Gambar 3",
+      label: "Image 3",
       type: "file" as "file"
     },
     image4: {
       value: "",
-      label: "Gambar 4",
+      label: "Image 4",
       type: "file" as "file"
     },
     image5: {
       value: "",
-      label: "Gambar 5",
+      label: "Image 5",
       type: "file" as "file"
     },
     image6: {
       value: "",
-      label: "Gambar 6",
+      label: "Image 6",
       type: "file" as "file"
     },
     image7: {
       value: "",
-      label: "Gambar 7",
+      label: "Image 7",
       type: "file" as "file"
     },
     image8: {
       value: "",
-      label: "Gambar 8",
+      label: "Image 8",
       type: "file" as "file"
     },
     image9: {
       value: "",
-      label: "Gambar 9",
+      label: "Image 9",
       type: "file" as "file"
     },
     image10: {
       value: "",
-      label: "Gambar 10",
+      label: "Image 10",
       type: "file" as "file"
     },
   };
@@ -471,7 +471,7 @@ export const BlogCategoryFields = () => {
   const fields = {
     title: {
       value: "",
-      label: "Judul",
+      label: "Title",
       required: true,
     },
     status: {
@@ -482,16 +482,16 @@ export const BlogCategoryFields = () => {
       options: [
         {
           value: "true",
-          label: "Aktif"
+          label: "Active"
         },{
           value: "false",
-          label: "Tidak Aktif"
+          label: "Inactive"
         }
       ],
     },
     order: {
       value: "",
-      label: "Urutan",
+      label: "Order",
       required: true,
       type: "number" as "number"
     },
@@ -504,17 +504,17 @@ export const BlogFields = (categories: BlogCategory[]) => {
   const fields = {
     title: {
       value: "",
-      label: "Judul",
+      label: "Title",
       required: true,
     },
     author: {
       value: "",
-      label: "Penulis",
+      label: "Author",
       required: true,
     },
     date: {
       value: "",
-      label: "Tanggal",
+      label: "Date",
       required: true,
       type: "date" as "date",
     },
@@ -531,21 +531,21 @@ export const BlogFields = (categories: BlogCategory[]) => {
       options: [
         {
           value: "true",
-          label: "Aktif"
+          label: "Active"
         },{
           value: "false",
-          label: "Tidak Aktif"
+          label: "Inactive"
         }
       ],
     },
     categoryId: {
       value: 0,
-      label: "Kategori",
+      label: "Category",
       type: "select" as "select",
       options: [
         {
           value: 0,
-          label: "Tidak Ada"
+          label: "Nothing"
         },
         ...categories.map((item) => ({
           value: item.id, 
@@ -555,19 +555,19 @@ export const BlogFields = (categories: BlogCategory[]) => {
     },
     description: {
       value: "",
-      label: "Deskripsi",
+      label: "Description",
       required: true,
       type: "textarea" as "textarea",
     },
     body: {
       value: "",
-      label: "Isi",
+      label: "Body",
       required: true,
       type: "texteditor" as "texteditor",
     },
     image: {
       value: "",
-      label: "Gambar",
+      label: "Image",
       type: "file" as "file"
     },
   };
@@ -579,12 +579,12 @@ export const ContactFields = () => {
   const fields = {
     title: {
       value: "",
-      label: "Judul",
+      label: "Title",
       required: true,
     },
     description: {
       value: "",
-      label: "Deskripsi",
+      label: "Description",
     },
     link: {
       value: "",
@@ -597,7 +597,7 @@ export const ContactFields = () => {
     },
     image: {
       value: "",
-      label: "Gambar",
+      label: "Image",
       type: "file" as "file"
     },
   };
@@ -609,7 +609,7 @@ export const SocialMediaFields = () => {
   const fields = {
     title: {
       value: "",
-      label: "Judul",
+      label: "Title",
       required: true,
     },
     link: {
@@ -625,7 +625,7 @@ export const QuotationFields = () => {
   const fields = {
     fullname: {
       value: "",
-      label: "Nama Lengkap",
+      label: "Fullname",
       required: true,
     },
     email: {
@@ -635,12 +635,12 @@ export const QuotationFields = () => {
     },
     phone: {
       value: "",
-      label: "Telepon",
+      label: "Phone",
       required: true,
     },
     title: {
       value: "",
-      label: "Judul",
+      label: "Title",
       required: true,
     },
     description: {

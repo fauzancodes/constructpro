@@ -45,8 +45,8 @@ const FilterModal: React.FC<FilterProps> = ({ filterOptions, setTotalPage, setCu
               id={filter.id} 
               aria-label={filter.ariaLabel} 
               onChange={(e) => handleSelectChange(filter.action, e.target.value)}
-              defaultValue="Pilih salah satu" className="select w-full">
-              <option disabled={true}>Pilih salah satu</option>
+              defaultValue="Select one" className="select w-full">
+              <option disabled={true}>Select one</option>
               {filter.options.map((option, index) => (
                 <option key={index} value={option.value}>
                   {option.label}
@@ -57,7 +57,7 @@ const FilterModal: React.FC<FilterProps> = ({ filterOptions, setTotalPage, setCu
         ))}
         <div className="modal-action">
           <form method="dialog">
-            <button className="btn">Tutup</button>
+            <button className="btn">Close</button>
           </form>
         </div>
       </div>

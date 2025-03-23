@@ -64,7 +64,7 @@ const UpdateWorkValues = ({params}: {params: Promise<{ id: string }>}) => {
     <MutationForm 
       onSubmit={handleUpdate}
       fields={WorkValueFields()}
-      title="Nilai Kerja"
+      title="Work Value"
       isUpdate={!!selectedData}
       initialData={selectedData || {}}
       setSelected={setSelectedData}

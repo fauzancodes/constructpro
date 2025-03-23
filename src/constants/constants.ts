@@ -56,7 +56,7 @@ export const Menu = [
     path: "#",
     children: [
       {
-        name: "Kategori",
+        name: "Category",
         path: "/dashboard/blog/categories"
       },{
         name: "Artikel",

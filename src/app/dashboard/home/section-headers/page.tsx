@@ -24,7 +24,7 @@ const SectionHeaders = () => {
 
   const columns = [
     {
-      label: "Judul",
+      label: "Title",
       key: "title"
     },
   ]
@@ -58,8 +58,8 @@ const SectionHeaders = () => {
       id: "select-order",
       ariaLabel: "Order",
       options: [
-        { value: "updatedAt", label: "Terakhir Diubah" },
-        { value: "title", label: "Judul" },
+        { value: "updatedAt", label: "Last Updated" },
+        { value: "title", label: "Title" },
       ],
       action: setOrder
     },
@@ -68,8 +68,8 @@ const SectionHeaders = () => {
       id: "select-sort",
       ariaLabel: "Sort",
       options: [
-        { value: "desc", label: "Menurun" },
-        { value: "asc", label: "Menaik" },
+        { value: "desc", label: "Descending" },
+        { value: "asc", label: "Ascending" },
       ],
       action: setSort
     },

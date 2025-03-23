@@ -6,8 +6,8 @@ import { SairaSemiCondensed } from "@/ui/home/fonts";
 import WhatsappButton from "@/ui/home/whatsappButton";
 
 export const metadata: Metadata = {
-  title: "Gema Karya Makmur",
-  description: "Gema Karya Makmur",
+  title: "ConstructPro",
+  description: "ConstructPro is a leading construction company providing high-quality building, renovation, and infrastructure services. We deliver excellence with precision, innovation, and reliability. Contact us for your construction needs.",
 };
 
 export default function RootLayout({

@@ -30,7 +30,7 @@ const CreateClients = () => {
     <MutationForm 
       onSubmit={handleCreate}
       fields={ClientFields()}
-      title="Klien"
+      title="Client"
       isUpdate={!!selectedData}
       initialData={selectedData || {}}
       setSelected={setSelectedData}

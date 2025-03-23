@@ -119,7 +119,7 @@ export const GetBlogTags = async () => {
         });
       }
     });
-    tagsResult.push({ name: "Semua", total: data.length })
+    tagsResult.push({ name: "All", total: data.length })
 
     tagsResult.sort((a, b) => b.total - a.total || a.name.localeCompare(b.name));
 

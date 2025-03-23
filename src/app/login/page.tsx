@@ -37,7 +37,7 @@ const Login = () => {
 
     if (result.success) {
       if (result.token) {
-        localStorage.setItem('gemakaryamakmur_token', result.token);
+        localStorage.setItem('constructpro_token', result.token);
       }
       setError(null);
       router.push("/dashboard");
@@ -65,7 +65,7 @@ const Login = () => {
               {...register("email", { required: "Email is required." })} 
             />
           </label>
-          <div className="validator-hint hidden">Mohon masukan alamat email yang valid</div>
+          <div className="validator-hint hidden">Please enter a valid email address</div>
         </fieldset>
         <fieldset className="fieldset">
           <legend className="fieldset-legend text-lg">Password:</legend>
@@ -78,10 +78,15 @@ const Login = () => {
               {...register("password", { required: "Password is required." })} 
             />
           </label>
-          <div className="validator-hint hidden">Mohon masukan password</div>
+          <div className="validator-hint hidden">Please enter password</div>
         </fieldset>
         {error && <p className="text-error text-center">{error}</p>}
         <button type="submit" className="btn btn-primary text-lg mt-5 w-full">{isLoadingButton ? "Login....." : "Login"}</button>
+        <p className="font-semibold mt-5">For demo purposes use the following credentials:</p>
+        <ul className="list-disc list-inside">
+          <li>Email: admin@constructpro.vercel.app</li>
+          <li>Password: Password@123</li>
+        </ul>
       </form>
     </div>
   )

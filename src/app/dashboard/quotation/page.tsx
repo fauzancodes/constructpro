@@ -4,11 +4,9 @@ import { GetAllQuotations } from "@/lib/repository/quotation";
 import DynamicTable from "@/ui/dashboard/table";
 import TableFooter from "@/ui/dashboard/tableFooter";
 import TableHeader from "@/ui/dashboard/tableHeader";
-// import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const Quotations = () => {
-  // const currentRoute = usePathname();
   const [refetch] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [datasets, setDatasets] = useState<any[]>([]);
@@ -25,19 +23,19 @@ const Quotations = () => {
 
   const columns = [
     {
-      label: "Tanggal",
+      label: "Date",
       key: "createdAt"
     },{
-      label: "Nama Lengkap",
+      label: "Fullname",
       key: "fullname"
     },{
       label: "Email",
       key: "email"
     },{
-      label: "Telepon",
+      label: "Phone",
       key: "phone"
     },{
-      label: "Judul",
+      label: "Title",
       key: "title"
     },
   ]
@@ -71,8 +69,8 @@ const Quotations = () => {
       id: "select-order",
       ariaLabel: "Order",
       options: [
-        { value: "createdAt", label: "Tanggal" },
-        { value: "title", label: "Judul" },
+        { value: "createdAt", label: "Date" },
+        { value: "title", label: "Title" },
         { value: "fullname", label: "Nama Lengkap" },
       ],
       action: setOrder
@@ -82,8 +80,8 @@ const Quotations = () => {
       id: "select-sort",
       ariaLabel: "Sort",
       options: [
-        { value: "desc", label: "Menurun" },
-        { value: "asc", label: "Menaik" },
+        { value: "desc", label: "Descending" },
+        { value: "asc", label: "Ascending" },
       ],
       action: setSort
     },
@@ -95,9 +93,9 @@ const Quotations = () => {
         <div className="modal-box min-w-9/12">
           <div className="modal-action flex flex-wrap">
             <div className="w-full">
-              <p><strong>Nama Lengkap:</strong> {modalData.fullname}</p>
+              <p><strong>Fullname:</strong> {modalData.fullname}</p>
               <p><strong>Email:</strong> {modalData.email}</p>
-              <p><strong>Telepon:</strong> {modalData.phone}</p>
+              <p><strong>Phone:</strong> {modalData.phone}</p>
               <p className="my-3 font-bold text-xl">{modalData.title}</p>
               <p className="text-justify">{modalData.description}</p>
             </div>
@@ -108,7 +106,7 @@ const Quotations = () => {
         </div>
       </dialog>
       <TableHeader 
-        title="Penawaran"
+        title="Quotation"
         setSearch={setSearch} 
         setTotalPage={setTotalPage}
         setCurrentPage={setCurrentPage}
