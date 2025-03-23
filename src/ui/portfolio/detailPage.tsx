@@ -49,8 +49,6 @@ const DetailPage = ({ slug }: Props) => {
 
   const data = portfolio
 
-  console.log("data:", data)
-
   return (
     <div className="w-full p-5 md:p-20 flex flex-wrap items-start justify-between gap-5">
       <motion.div 

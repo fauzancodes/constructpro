@@ -138,7 +138,7 @@ const Footer = () => {
                   key={index}
                   whileHover={{ translateX: "0.5rem" }}
                 >
-                  <Link href={`/portfolio/${item.id}`} className="btn btn-ghost hover:btn-link text-[16px] font-normal p-0 h-fit mb-3">
+                  <Link href={`/portfolio/${item.slug}`} className="btn btn-ghost hover:btn-link text-[16px] font-normal p-0 h-fit mb-3">
                     <FaArrowRight />
                     {item.title}
                   </Link>
