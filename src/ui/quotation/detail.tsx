@@ -124,41 +124,41 @@ const Detail = () => {
         variants={SlideUpVariant}
         custom={0}
       >
-        <h2 className="fotn-semibold text-4xl mb-5">PENAWARAN ANDA</h2>
+        <h2 className="fotn-semibold text-4xl mb-5">YOUR QUOTATION</h2>
         <fieldset className="fieldset">
-          <legend className="fieldset-legend text-lg">Nama Lengkap:</legend>
+          <legend className="fieldset-legend text-lg">Fullname:</legend>
           <label className="input validator w-full">
             <FaUser />
-            <input onChange={handleChange} type="input" name="fullname" value={formData.fullname ?? ""} placeholder="Budi Budiman" required/>
+            <input onChange={handleChange} type="input" name="fullname" value={formData.fullname ?? ""} placeholder="John Doe" required/>
           </label>
-          <div className="validator-hint hidden">Mohon masukan nama lengkap</div>
+          <div className="validator-hint hidden">Please enter your fullname</div>
         </fieldset>
         <fieldset className="fieldset">
-          <legend className="fieldset-legend text-lg">Alamat Email:</legend>
+          <legend className="fieldset-legend text-lg">Email Address:</legend>
           <label className="input validator w-full">
             <FaEnvelope />
             <input onChange={handleChange} type="email" name="email" value={formData.email ?? ""} placeholder="youremail@mail.com" required/>
           </label>
-          <div className="validator-hint hidden">Mohon masukan alamat email yang valid</div>
+          <div className="validator-hint hidden">Please enter a valid email address</div>
         </fieldset>
         <fieldset className="fieldset">
-          <legend className="fieldset-legend text-lg">Nomor Handphone:</legend>
+          <legend className="fieldset-legend text-lg">Phone Number:</legend>
           <label className="input validator w-full">
             <FaPhone />
-            <input onChange={handleChange} type="tel" name="phone" value={formData.phone ?? ""} className="tabular-nums" required placeholder="08229966775544" pattern="[0-9]*" minLength={10} maxLength={14} title="Mohon masukan nomor handphone yang valid"/>
+            <input onChange={handleChange} type="tel" name="phone" value={formData.phone ?? ""} className="tabular-nums" required placeholder="08229966775544" pattern="[0-9]*" minLength={10} maxLength={14} title="Please enter a valid phone number"/>
           </label>
-          <p className="validator-hint hidden">Mohon masukan nomor handphone yang valid</p>
+          <p className="validator-hint hidden">Please enter a valid phone number</p>
         </fieldset>
         <fieldset className="fieldset">
           <legend className="fieldset-legend text-lg">Title:</legend>
           <label className="input validator w-full">
-            <input onChange={handleChange} type="input" name="title" value={formData.title ?? ""} placeholder="Konsultasi Pembangunan Perumahan" required/>
+            <input onChange={handleChange} type="input" name="title" value={formData.title ?? ""} placeholder="Housing Development Consultation" required/>
           </label>
-          <div className="validator-hint hidden">Mohon masukan judul</div>
+          <div className="validator-hint hidden">Please enter a title</div>
         </fieldset>
         <fieldset className="fieldset">
           <legend className="fieldset-legend text-lg">Description:</legend>
-          <textarea onChange={handleChange} name="description" value={formData.description ?? ""} className="textarea h-80 w-full" placeholder="Saya ingin membuat perumahan mewah dengan kualitas terbaik!"></textarea>
+          <textarea onChange={handleChange} name="description" value={formData.description ?? ""} className="textarea h-80 w-full" placeholder="I want to create luxury housing with the best quality!"></textarea>
         </fieldset>
         <div className="w-full flex justify-center mt-5">
           <ReCAPTCHA
@@ -172,10 +172,10 @@ const Detail = () => {
           className="btn btn-primary w-full mt-5 btn-lg"
           whileHover={{ scale: 1.1 }}
         >
-          {isLoadingForm ? "MENGIRIM PENAWARAN....." : "AJUKAN PENAWARAN ANDA"}
+          {isLoadingForm ? "SENDING QUOTATION....." : "SUBMIT YOUR QUOTATION"}
         </motion.button>
-        {showSuccessSubmit && <p className="w-full text-center mt-5 font-medium text-success-content bg-success p-3">Penawaran telah berhasil dikirim!</p>}
-        {showReCAPTCHAFailed && <p className="w-full text-center mt-5 font-medium text-error-content bg-error p-3">Harap verifikasi reCAPTCHA!</p>}
+        {showSuccessSubmit && <p className="w-full text-center mt-5 font-medium text-success-content bg-success p-3">Quotation has been successfully submitted!</p>}
+        {showReCAPTCHAFailed && <p className="w-full text-center mt-5 font-medium text-error-content bg-error p-3">Please verify reCAPTCHA!</p>}
       </motion.form>
       <motion.div 
         className="w-full md:w-5/12"
