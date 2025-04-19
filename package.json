@@ -10,7 +10,7 @@
     "migrate": "npx prisma migrate dev"
   },
   "dependencies": {
-    "@prisma/client": "^6.5.0",
+    "@prisma/client": "^6.6.0",
     "@tailwindcss/postcss": "^4.0.7",
     "bcryptjs": "^3.0.2",
     "cloudinary": "^2.6.0",
