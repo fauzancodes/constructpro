@@ -167,7 +167,7 @@ const MutationForm: React.FC<MutationFormProps> = ({
   return (
     <div className="m-5">
       <Link href={cancelLink} className="btn btn-base"><FaArrowLeft />Back</Link>
-      <h1 className="font-bold text-3xl w-full text-center !mb-5">{isUpdate ? "Merubah" : "Membuat"} {title}</h1>
+      <h1 className="font-bold text-3xl w-full text-center !mb-5">{isUpdate ? "Update" : "Create"} {title}</h1>
       {withImage && (
         <div className="flex flex-wrap justify-center gap-5">
           {Object.entries(imagePreviews).map(([key, src]) => (
