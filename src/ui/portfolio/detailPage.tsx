@@ -59,7 +59,7 @@ const DetailPage = ({ slug }: Props) => {
         variants={SlideRightVariant}
         custom={0}
       >
-        {data.description && <h3 className="bg-primary p-5 text-primary-content font-semibold text-2xl text-center">INFORMASI PROYEK</h3>}
+        {data.description && <h3 className="bg-primary p-5 text-primary-content font-semibold text-2xl text-center">PROJECT INFORMATION</h3>}
         {data.client && <div className={`flex items-center border border-base-300 ${!data.description && "w-full md:w-3/12"}`}>
           <FaUser className="m-5 text-3xl text-primary" />
           <div className={`p-5 bg-base-200 w-full h-full ${!data.description && "flex flex-col justify-center"}`}>
