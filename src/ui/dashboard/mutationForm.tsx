@@ -5,6 +5,8 @@ import { SetStateAction, useEffect, useState } from "react";
 import "react-quill-new/dist/quill.snow.css";
 import Loading from "@/ui/home/loading";
 import dynamic from "next/dynamic";
+import Link from "next/link";
+import { FaArrowLeft } from "react-icons/fa6";
 
 const ReactQuill = dynamic(() => import("react-quill-new"), { ssr: false });
 
@@ -27,6 +29,7 @@ interface MutationFormProps<T = any> {
   withImage?: boolean;
   multiImage?: boolean;
   smallImagePreview?: boolean;
+  cancelLink: string;
 }
 
 const MutationForm: React.FC<MutationFormProps> = ({
@@ -39,7 +42,8 @@ const MutationForm: React.FC<MutationFormProps> = ({
   isLoading,
   withImage,
   multiImage,
-  smallImagePreview
+  smallImagePreview,
+  cancelLink
 }) => {
   const [imagePreviewLoading, setImagePreviewLoading] = useState(false)
   const [formData, setFormData] = useState<Record<string, any>>(
@@ -162,6 +166,7 @@ const MutationForm: React.FC<MutationFormProps> = ({
 
   return (
     <div className="m-5">
+      <Link href={cancelLink} className="btn btn-base"><FaArrowLeft />Back</Link>
       <h1 className="font-bold text-3xl w-full text-center !mb-5">{isUpdate ? "Merubah" : "Membuat"} {title}</h1>
       {withImage && (
         <div className="flex flex-wrap justify-center gap-5">

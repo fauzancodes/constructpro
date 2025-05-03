@@ -30,13 +30,15 @@ const CreatePortfolios = () => {
     fetchData();
   }, []);
 
+  const listPage = "/dashboard/portfolioes"
+
   const handleCreate = async (formData: Portfolio) => {
     try {
       setIsLoading(true)
       const result = await CreatePortfolio(formData);
   
       if (result?.success) {
-        router.push("/dashboard/portfolioes");
+        router.push(listPage);
       }
     } catch (error) {
       console.error("Error saving data:", error);
@@ -55,6 +57,7 @@ const CreatePortfolios = () => {
       withImage
       multiImage
       smallImagePreview
+      cancelLink={listPage}
     />
   )
 }

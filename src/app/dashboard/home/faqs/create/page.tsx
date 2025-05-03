@@ -13,13 +13,15 @@ const CreateFAQs = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [selectedData, setSelectedData] = useState<FAQ | null>(null);
 
+  const listPage = "/dashboard/home/faqs"
+
   const handleCreate = async (formData: FAQ) => {
     try {
       setIsLoading(true)
       const result = await CreateFAQ(formData);
   
       if (result?.success) {
-        router.push("/dashboard/home/faqs");
+        router.push(listPage);
       }
     } catch (error) {
       console.error("Error saving data:", error);
@@ -36,6 +38,7 @@ const CreateFAQs = () => {
       setSelected={setSelectedData}
       isLoading={isLoading}
       withImage
+      cancelLink={listPage}
     />
   )
 }

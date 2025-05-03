@@ -43,13 +43,15 @@ const UpdatePageHeaders = ({params}: {params: Promise<{ id: string }>}) => {
     fetchData();
   }, []);
 
+  const listPage = "/dashboard/home/page-headers"
+
   const handleUpdate = async (formData: PageHeader) => {
     try {
       setIsLoading(true)
       const result = await UpdatePageHeader(formData);
   
       if (result?.success) {
-        router.push("/dashboard/home/page-headers");
+        router.push(listPage);
       }
     } catch (error) {
       console.error("Error saving data:", error);
@@ -66,6 +68,7 @@ const UpdatePageHeaders = ({params}: {params: Promise<{ id: string }>}) => {
       setSelected={setSelectedData}
       isLoading={isLoading}
       withImage
+      cancelLink={listPage}
     />
   )
 }

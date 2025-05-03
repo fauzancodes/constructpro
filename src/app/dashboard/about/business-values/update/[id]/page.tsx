@@ -44,13 +44,15 @@ const UpdateBusinessValues = ({params}: {params: Promise<{ id: string }>}) => {
     fetchData();
   }, []);
 
+  const listPage = "/dashboard/about/business-values"
+
   const handleUpdate = async (formData: BusinessValue) => {
     try {
       setIsLoading(true)
       const result = await UpdateBusinessValue(formData);
   
       if (result?.success) {
-        router.push("/dashboard/about/business-values");
+        router.push(listPage);
       }
     } catch (error) {
       console.error("Error saving data:", error);
@@ -67,6 +69,7 @@ const UpdateBusinessValues = ({params}: {params: Promise<{ id: string }>}) => {
       setSelected={setSelectedData}
       isLoading={isLoading}
       withImage
+      cancelLink={listPage}
     />
   )
 }

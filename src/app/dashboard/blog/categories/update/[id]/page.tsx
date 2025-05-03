@@ -43,13 +43,15 @@ const UpdateBlogCategorys = ({params}: {params: Promise<{ id: string }>}) => {
     fetchData();
   }, []);
 
+  const listPage = "/dashboard/blog/categories"
+
   const handleUpdate = async (formData: BlogCategory) => {
     try {
       setIsLoading(true)
       const result = await UpdateBlogCategory(formData);
   
       if (result?.success) {
-        router.push("/dashboard/blog/categories");
+        router.push(listPage);
       }
     } catch (error) {
       console.error("Error saving data:", error);
@@ -66,6 +68,7 @@ const UpdateBlogCategorys = ({params}: {params: Promise<{ id: string }>}) => {
       setSelected={setSelectedData}
       isLoading={isLoading}
       withImage
+      cancelLink={listPage}
     />
   )
 }

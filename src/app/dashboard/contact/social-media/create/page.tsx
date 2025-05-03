@@ -13,13 +13,15 @@ const CreateSocialMedias = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [selectedData, setSelectedData] = useState<SocialMedia | null>(null);
 
+  const listPage = "/dashboard/contact/social-media"
+
   const handleCreate = async (formData: SocialMedia) => {
     try {
       setIsLoading(true)
       const result = await CreateSocialMedia(formData);
   
       if (result?.success) {
-        router.push("/dashboard/contact/social-media");
+        router.push(listPage);
       }
     } catch (error) {
       console.error("Error saving data:", error);
@@ -35,6 +37,7 @@ const CreateSocialMedias = () => {
       initialData={selectedData || {}}
       setSelected={setSelectedData}
       isLoading={isLoading}
+      cancelLink={listPage}
     />
   )
 }

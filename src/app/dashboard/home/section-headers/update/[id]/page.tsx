@@ -42,13 +42,15 @@ const UpdateSectionHeaders = ({params}: {params: Promise<{ id: string }>}) => {
     fetchData();
   }, []);
 
+  const listPage = "/dashboard/home/section-headers"
+
   const handleUpdate = async (formData: SectionHeader) => {
     try {
       setIsLoading(true)
       const result = await UpdateSectionHeader(formData);
   
       if (result?.success) {
-        router.push("/dashboard/home/section-headers");
+        router.push(listPage);
       }
     } catch (error) {
       console.error("Error saving data:", error);
@@ -65,6 +67,7 @@ const UpdateSectionHeaders = ({params}: {params: Promise<{ id: string }>}) => {
       setSelected={setSelectedData}
       isLoading={isLoading}
       withImage
+      cancelLink={listPage}
     />
   )
 }

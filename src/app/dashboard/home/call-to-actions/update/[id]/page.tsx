@@ -50,13 +50,15 @@ const UpdateCallToActions = ({params}: {params: Promise<{ id: string }>}) => {
     fetchData();
   }, []);
 
+  const listPage = "/dashboard/home/call-to-actions"
+
   const handleUpdate = async (formData: CallToAction) => {
     try {
       setIsLoading(true)
       const result = await UpdateCallToAction(formData);
   
       if (result?.success) {
-        router.push("/dashboard/home/call-to-actions");
+        router.push(listPage);
       }
     } catch (error) {
       console.error("Error saving data:", error);
@@ -74,6 +76,7 @@ const UpdateCallToActions = ({params}: {params: Promise<{ id: string }>}) => {
       isLoading={isLoading}
       withImage
       multiImage
+      cancelLink={listPage}
     />
   )
 }

@@ -13,13 +13,15 @@ const CreateClients = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [selectedData, setSelectedData] = useState<Client | null>(null);
 
+  const listPage = "/dashboard/clients"
+
   const handleCreate = async (formData: Client) => {
     try {
       setIsLoading(true)
       const result = await CreateClient(formData);
   
       if (result?.success) {
-        router.push("/dashboard/clients");
+        router.push(listPage);
       }
     } catch (error) {
       console.error("Error saving data:", error);
@@ -36,6 +38,7 @@ const CreateClients = () => {
       setSelected={setSelectedData}
       isLoading={isLoading}
       withImage
+      cancelLink={listPage}
     />
   )
 }

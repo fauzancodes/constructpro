@@ -13,13 +13,15 @@ const CreateBlogCategorys = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [selectedData, setSelectedData] = useState<BlogCategory | null>(null);
 
+  const listPage = "/dashboard/blog/categories"
+
   const handleCreate = async (formData: BlogCategory) => {
     try {
       setIsLoading(true)
       const result = await CreateBlogCategory(formData);
   
       if (result?.success) {
-        router.push("/dashboard/blog/categories");
+        router.push(listPage);
       }
     } catch (error) {
       console.error("Error saving data:", error);
@@ -36,6 +38,7 @@ const CreateBlogCategorys = () => {
       setSelected={setSelectedData}
       isLoading={isLoading}
       withImage
+      cancelLink={listPage}
     />
   )
 }

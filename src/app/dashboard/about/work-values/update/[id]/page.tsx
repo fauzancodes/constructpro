@@ -47,13 +47,15 @@ const UpdateWorkValues = ({params}: {params: Promise<{ id: string }>}) => {
     fetchData();
   }, []);
 
+  const listPage = "/dashboard/about/work-values"
+
   const handleUpdate = async (formData: WorkValue) => {
     try {
       setIsLoading(true)
       const result = await UpdateWorkValue(formData);
   
       if (result?.success) {
-        router.push("/dashboard/about/work-values");
+        router.push(listPage);
       }
     } catch (error) {
       console.error("Error saving data:", error);
@@ -70,6 +72,7 @@ const UpdateWorkValues = ({params}: {params: Promise<{ id: string }>}) => {
       setSelected={setSelectedData}
       isLoading={isLoading}
       withImage
+      cancelLink={listPage}
     />
   )
 }

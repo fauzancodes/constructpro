@@ -45,13 +45,15 @@ const UpdateContacts = ({params}: {params: Promise<{ id: string }>}) => {
     fetchData();
   }, []);
 
+  const listPage = "/dashboard/contact/contacts"
+
   const handleUpdate = async (formData: Contact) => {
     try {
       setIsLoading(true)
       const result = await UpdateContact(formData);
   
       if (result?.success) {
-        router.push("/dashboard/contact/contacts");
+        router.push(listPage);
       }
     } catch (error) {
       console.error("Error saving data:", error);
@@ -68,6 +70,7 @@ const UpdateContacts = ({params}: {params: Promise<{ id: string }>}) => {
       setSelected={setSelectedData}
       isLoading={isLoading}
       withImage
+      cancelLink={listPage}
     />
   )
 }

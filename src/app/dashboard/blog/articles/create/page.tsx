@@ -30,13 +30,15 @@ const CreateBlogs = () => {
     fetchData();
   }, []);
 
+  const listPage = "/dashboard/blog/articles"
+
   const handleCreate = async (formData: Blog) => {
     try {
       setIsLoading(true)
       const result = await CreateBlog(formData);
   
       if (result?.success) {
-        router.push("/dashboard/blog/articles");
+        router.push(listPage);
       }
     } catch (error) {
       console.error("Error saving data:", error);
@@ -53,6 +55,7 @@ const CreateBlogs = () => {
       setSelected={setSelectedData}
       isLoading={isLoading}
       withImage
+      cancelLink={listPage}
     />
   )
 }

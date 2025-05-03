@@ -42,13 +42,15 @@ const UpdateSocialMedias = ({params}: {params: Promise<{ id: string }>}) => {
     fetchData();
   }, []);
 
+  const listPage = "/dashboard/contact/social-media"
+
   const handleUpdate = async (formData: SocialMedia) => {
     try {
       setIsLoading(true)
       const result = await UpdateSocialMedia(formData);
   
       if (result?.success) {
-        router.push("/dashboard/contact/social-media");
+        router.push(listPage);
       }
     } catch (error) {
       console.error("Error saving data:", error);
@@ -65,6 +67,7 @@ const UpdateSocialMedias = ({params}: {params: Promise<{ id: string }>}) => {
       setSelected={setSelectedData}
       isLoading={isLoading}
       withImage
+      cancelLink={listPage}
     />
   )
 }

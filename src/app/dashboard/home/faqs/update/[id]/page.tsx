@@ -43,13 +43,15 @@ const UpdateFAQs = ({params}: {params: Promise<{ id: string }>}) => {
     fetchData();
   }, []);
 
+  const listPage = "/dashboard/home/faqs"
+
   const handleUpdate = async (formData: FAQ) => {
     try {
       setIsLoading(true)
       const result = await UpdateFAQ(formData);
   
       if (result?.success) {
-        router.push("/dashboard/home/faqs");
+        router.push(listPage);
       }
     } catch (error) {
       console.error("Error saving data:", error);
@@ -65,6 +67,7 @@ const UpdateFAQs = ({params}: {params: Promise<{ id: string }>}) => {
       initialData={selectedData || {}}
       setSelected={setSelectedData}
       isLoading={isLoading}
+      cancelLink={listPage}
     />
   )
 }

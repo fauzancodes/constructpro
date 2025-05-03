@@ -43,13 +43,15 @@ const UpdateImageSliders = ({params}: {params: Promise<{ id: string }>}) => {
     fetchData();
   }, []);
 
+  const listPage = "/dashboard/home/image-sliders"
+
   const handleUpdate = async (formData: ImageSlider) => {
     try {
       setIsLoading(true)
       const result = await UpdateImageSlider(formData);
   
       if (result?.success) {
-        router.push("/dashboard/home/image-sliders");
+        router.push(listPage);
       }
     } catch (error) {
       console.error("Error saving data:", error);
@@ -66,6 +68,7 @@ const UpdateImageSliders = ({params}: {params: Promise<{ id: string }>}) => {
       setSelected={setSelectedData}
       isLoading={isLoading}
       withImage
+      cancelLink={listPage}
     />
   )
 }

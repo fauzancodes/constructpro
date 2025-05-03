@@ -43,13 +43,15 @@ const UpdateAchievements = ({params}: {params: Promise<{ id: string }>}) => {
     fetchData();
   }, []);
 
+  const listPage = "/dashboard/about/achievements"
+
   const handleUpdate = async (formData: Achievement) => {
     try {
       setIsLoading(true)
       const result = await UpdateAchievement(formData);
   
       if (result?.success) {
-        router.push("/dashboard/about/achievements");
+        router.push(listPage);
       }
     } catch (error) {
       console.error("Error saving data:", error);
@@ -66,6 +68,7 @@ const UpdateAchievements = ({params}: {params: Promise<{ id: string }>}) => {
       setSelected={setSelectedData}
       isLoading={isLoading}
       withImage
+      cancelLink={listPage}
     />
   )
 }

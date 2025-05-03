@@ -13,13 +13,15 @@ const CreateImageSliders = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [selectedData, setSelectedData] = useState<ImageSlider | null>(null);
 
+  const listPage = "/dashboard/home/image-sliders"
+
   const handleCreate = async (formData: ImageSlider) => {
     try {
       setIsLoading(true)
       const result = await CreateImageSlider(formData);
   
       if (result?.success) {
-        router.push("/dashboard/home/image-sliders");
+        router.push(listPage);
       }
     } catch (error) {
       console.error("Error saving data:", error);
@@ -36,6 +38,7 @@ const CreateImageSliders = () => {
       setSelected={setSelectedData}
       isLoading={isLoading}
       withImage
+      cancelLink={listPage}
     />
   )
 }

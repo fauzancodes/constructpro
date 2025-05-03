@@ -45,13 +45,15 @@ const UpdateServices = ({params}: {params: Promise<{ id: string }>}) => {
     fetchData();
   }, []);
 
+  const listPage = "/dashboard/services"
+
   const handleUpdate = async (formData: Service) => {
     try {
       setIsLoading(true)
       const result = await UpdateService(formData);
   
       if (result?.success) {
-        router.push("/dashboard/services");
+        router.push(listPage);
       }
     } catch (error) {
       console.error("Error saving data:", error);
@@ -68,6 +70,7 @@ const UpdateServices = ({params}: {params: Promise<{ id: string }>}) => {
       setSelected={setSelectedData}
       isLoading={isLoading}
       withImage
+      cancelLink={listPage}
     />
   )
 }

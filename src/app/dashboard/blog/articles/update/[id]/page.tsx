@@ -67,13 +67,15 @@ const UpdateBlogs = ({params}: {params: Promise<{ id: string }>}) => {
     fetchData();
   }, []);
 
+  const listPage = "/dashboard/blog/articles"
+
   const handleUpdate = async (formData: Blog) => {
     try {
       setIsLoading(true)
       const result = await UpdateBlog(formData);
   
       if (result?.success) {
-        router.push("/dashboard/blog/articles");
+        router.push(listPage);
       }
     } catch (error) {
       console.error("Error saving data:", error);
@@ -92,6 +94,7 @@ const UpdateBlogs = ({params}: {params: Promise<{ id: string }>}) => {
       withImage
       multiImage
       smallImagePreview
+      cancelLink={listPage}
     />
   )
 }

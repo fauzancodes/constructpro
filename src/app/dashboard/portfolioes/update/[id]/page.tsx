@@ -76,13 +76,15 @@ const UpdatePortfolios = ({params}: {params: Promise<{ id: string }>}) => {
     fetchData();
   }, []);
 
+  const listPage = "/dashboard/portfolioes"
+
   const handleUpdate = async (formData: Portfolio) => {
     try {
       setIsLoading(true)
       const result = await UpdatePortfolio(formData);
   
       if (result?.success) {
-        router.push("/dashboard/portfolioes");
+        router.push(listPage);
       }
     } catch (error) {
       console.error("Error saving data:", error);
@@ -101,6 +103,7 @@ const UpdatePortfolios = ({params}: {params: Promise<{ id: string }>}) => {
       withImage
       multiImage
       smallImagePreview
+      cancelLink={listPage}
     />
   )
 }
