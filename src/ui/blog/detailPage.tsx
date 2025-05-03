@@ -137,7 +137,7 @@ const DetailPage = ({ slug }: Props) => {
         null
       ) : (
         <div className="hidden md:block w-full md:w-[30%] sticky top-20 p-5 bg-base-200 h-fit">
-          <h4 className="font-semibold text-2xl mb-5">DAFTAR ISI</h4>
+          <h4 className="font-semibold text-2xl mb-5">LIST OF CONTENT</h4>
           {headerData.map((item, index) => (
             <button key={index} onClick={() => HandleScrollToElement(item.id)} className="w-full btn btn-ghost hover:underline hover:text-primary justify-start text-start p-0 h-fit mb-3 !bg-transparent !border-0 !shadow-none text-lg font-normal">{item.content}</button>
           ))}
